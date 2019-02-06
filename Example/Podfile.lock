@@ -1,0 +1,16 @@
+PODS:
+  - KeyValueObservation (1.0.0)
+
+DEPENDENCIES:
+  - KeyValueObservation (from `../`)
+
+EXTERNAL SOURCES:
+  KeyValueObservation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KeyValueObservation: 3216e992d5384a26bfb4b07c11ae848f42b042d5
+
+PODFILE CHECKSUM: 1b54de77608b255d0b4b0b05eeb4e6239e57bfae
+
+COCOAPODS: 1.5.3
