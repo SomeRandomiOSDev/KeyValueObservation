@@ -10,10 +10,18 @@ Block based key-value observations in Objective-C
 
 ## Installation
 
-KeyValueObservation is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+KeyValueObservation is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). 
+
+To install via CocoaPods, simply add the following line to your Podfile:
 
 ```ruby
 pod 'KeyValueObservation'
+```
+
+To install via Carthage, simply add the following line to your Cartfile:
+
+```ruby
+github "SomeRandomiOSDev/KeyValueObservation"
 ```
 
 ## Usage
