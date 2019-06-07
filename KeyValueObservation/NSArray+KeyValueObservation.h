@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-NS_SWIFT_UNAVAILABLE("Use Swift's KeyPath observing instead")
+OBJC_SWIFT_UNAVAILABLE("use Swift's KeyPath observing instead")
 @interface NSArray (KeyValueObservation)
 
 /// Creates an registers a Key-Value Observation to the objects in the array at given indexes for the provided index path. The observed change is observed through calling the provided handler block.

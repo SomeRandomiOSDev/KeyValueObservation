@@ -1,0 +1,6 @@
+framework module KeyValueObservation {
+  umbrella header "KeyValueObservation.h"
+
+  export *
+  module * { export * }
+}

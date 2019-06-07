@@ -1,9 +1,12 @@
 # KeyValueObservation
 Block based key-value observations in Objective-C
 
-[![Version](https://img.shields.io/cocoapods/v/KeyValueObservation.svg?style=flat)](https://cocoapods.org/pods/KeyValueObservation)
-[![License](https://img.shields.io/cocoapods/l/KeyValueObservation.svg?style=flat)](https://cocoapods.org/pods/KeyValueObservation)
-[![Platform](https://img.shields.io/cocoapods/p/KeyValueObservation.svg?style=flat)](https://cocoapods.org/pods/KeyValueObservation)
+[![License MIT](https://img.shields.io/cocoapods/l/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation) 
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![Platform](https://img.shields.io/cocoapods/p/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
+[![Build](https://travis-ci.com/SomeRandomiOSDev/KeyValueObservation.svg?branch=master)](https://travis-ci.com/SomeRandomiOSDev/KeyValueObservation)
+[![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation)
 
 ## Installation
 

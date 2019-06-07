@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "KeyValueObservationExample.app"
-               BlueprintName = "KeyValueObservationExample"
+               BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+               BuildableName = "KeyValueObservation.framework"
+               BlueprintName = "KeyValueObservation tvOS"
                ReferencedContainer = "container:KeyValueObservation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,15 +26,26 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+            BuildableName = "KeyValueObservation.framework"
+            BlueprintName = "KeyValueObservation tvOS"
+            ReferencedContainer = "container:KeyValueObservation.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "KeyValueObservationTests.xctest"
-               BlueprintName = "KeyValueObservationTests"
+               BlueprintIdentifier = "DDF756D722AA7841002E11D4"
+               BuildableName = "KeyValueObservation tvOS Tests.xctest"
+               BlueprintName = "KeyValueObservation tvOS Tests"
                ReferencedContainer = "container:KeyValueObservation.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +53,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "KeyValueObservationExample.app"
-            BlueprintName = "KeyValueObservationExample"
+            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+            BuildableName = "KeyValueObservation.framework"
+            BlueprintName = "KeyValueObservation tvOS"
             ReferencedContainer = "container:KeyValueObservation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,16 +72,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "KeyValueObservationExample.app"
-            BlueprintName = "KeyValueObservationExample"
+            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+            BuildableName = "KeyValueObservation.framework"
+            BlueprintName = "KeyValueObservation tvOS"
             ReferencedContainer = "container:KeyValueObservation.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +90,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "KeyValueObservationExample.app"
-            BlueprintName = "KeyValueObservationExample"
+            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+            BuildableName = "KeyValueObservation.framework"
+            BlueprintName = "KeyValueObservation tvOS"
             ReferencedContainer = "container:KeyValueObservation.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

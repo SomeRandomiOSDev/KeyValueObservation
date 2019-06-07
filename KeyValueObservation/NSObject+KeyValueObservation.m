@@ -7,6 +7,8 @@
 //
 
 #import <KeyValueObservation/NSObject+KeyValueObservation.h>
+#import <objc/message.h>
+
 #import "SRDKeyValueObservation+Internal.h"
 
 #pragma mark - Class Category | NSObject (KeyValueObservation)

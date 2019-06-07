@@ -87,7 +87,7 @@ void srd_invalidate_kvo_after_free(void) { asm(""); }
 #if DEBUG
     if (object == nil && _unownedObject != nil)
         NSLog(@"-[%@ %@] called after the observed object was deallocated. Set a symbolic breakpoint for 'srd_invalidate_kvo_after_free' to debug", self.description, NSStringFromSelector(_cmd));
-    else
+        srd_invalidate_kvo_after_free();
 #endif // #if DEBUG
     
     if (object != nil) {
@@ -107,10 +107,8 @@ void srd_invalidate_kvo_after_free(void) { asm(""); }
 #pragma mark - NSObject Overrides
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:_keyPath]) {
+    if (object == _unownedObject && [keyPath isEqualToString:_keyPath]) {
         _handler(object, [[SRDKeyValueObservedChange alloc] initWithChangeDictionary:change]);
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 
