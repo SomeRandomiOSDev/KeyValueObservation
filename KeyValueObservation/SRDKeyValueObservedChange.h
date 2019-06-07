@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-NS_SWIFT_UNAVAILABLE("Use Swift's KeyPath observing instead")
+OBJC_SWIFT_UNAVAILABLE("use Swift's KeyPath observing instead")
 /// A class that represents the changes associated with a KVO event
 @interface SRDKeyValueObservedChange : NSObject
 

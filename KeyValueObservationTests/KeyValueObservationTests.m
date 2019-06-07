@@ -9,6 +9,8 @@
 @import XCTest;
 @import KeyValueObservation;
 
+#import "SRDKeyValueObservation+Internal.h"
+
 #pragma mark - Class (DummyClass) Interface
 
 @interface DummyClass : NSObject {
@@ -18,6 +20,8 @@
 
 @property (nonatomic, assign) NSInteger integer;
 @property (nonatomic, assign) NSInteger integer2;
+
+@property (nonatomic, strong) NSObject* object;
 
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, strong) NSMutableSet *set;
@@ -40,12 +44,26 @@
 
 - (void)testNullParametersThrow {
     NSObject *object = [[NSObject alloc] init];
+    NSArray *array = [[NSArray alloc] init];
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
     
     XCTAssertThrows([object observeKeyPath:nil options:NSKeyValueObservingOptionNew changeHandler:^(id _, SRDKeyValueObservedChange *__) { }]);
     XCTAssertThrows([object observeKeyPath:@"" options:NSKeyValueObservingOptionNew changeHandler:nil]);
+
+    XCTAssertThrows([array observeKeyPath:nil forObjectsAtIndexes:[NSIndexSet new] options:NSKeyValueObservingOptionNew changeHandler:^(id _, SRDKeyValueObservedChange *__) { }]);
+    XCTAssertThrows([array observeKeyPath:@"" forObjectsAtIndexes:nil options:NSKeyValueObservingOptionNew changeHandler:^(id _, SRDKeyValueObservedChange *__) { }]);
+    XCTAssertThrows([array observeKeyPath:@"" forObjectsAtIndexes:[NSIndexSet new] options:NSKeyValueObservingOptionNew changeHandler:nil]);
+
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithObject:nil keyPath:nil options:kNilOptions changeHandler:nil]);
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithObject:object keyPath:nil options:kNilOptions changeHandler:nil]);
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithObject:object keyPath:@"" options:kNilOptions changeHandler:nil]);
+
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithArray:nil indexes:nil keyPath:nil options:kNilOptions changeHandler:nil]);
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithArray:array indexes:nil keyPath:nil options:kNilOptions changeHandler:nil]);
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithArray:array indexes:[NSIndexSet new] keyPath:nil options:kNilOptions changeHandler:nil]);
+    XCTAssertThrows([[SRDKeyValueObservation alloc] initWithArray:array indexes:[NSIndexSet new] keyPath:@"" options:kNilOptions changeHandler:nil]);
     
 #pragma clang diagnostic pop
 }
@@ -367,6 +385,37 @@
     observation = nil;
 }
 
+- (void)testInvalidateAfterFreeLogs {
+    SRDKeyValueObservation* observation;
+    @autoreleasepool {
+        observation = [[SRDKeyValueObservation alloc] initWithObject:[[DummyClass alloc] init] keyPath:@"integer" options:kNilOptions changeHandler:^(id _, id __) {}];
+    }
+
+    [observation invalidate];
+}
+
+- (void)testObservedObjectSetToFromNil {
+    DummyClass* dummy = [[DummyClass alloc] init];
+    SRDKeyValueObservation *observation;
+    __block BOOL first = YES;
+
+    observation = [dummy observeKeyPath:@"object" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew changeHandler:^(id object, SRDKeyValueObservedChange *change) {
+        if (first) {
+            XCTAssertNil(change.oldValue);
+            XCTAssertNotNil(change.newValue);
+
+            first = NO;
+        }
+        else {
+            XCTAssertNotNil(change.oldValue);
+            XCTAssertNil(change.newValue);
+        }
+    }];
+
+    dummy.object = [[NSObject alloc] init];
+    dummy.object = nil;
+}
+
 #pragma mark - NSObject Overrides
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -382,6 +431,6 @@
 
 #pragma mark - Property Synthesis
 
-@synthesize integer = _integer, integer2 = _integer2, array = _array, set = _set;
+@synthesize integer = _integer, integer2 = _integer2, object = _object, array = _array, set = _set;
 
 @end

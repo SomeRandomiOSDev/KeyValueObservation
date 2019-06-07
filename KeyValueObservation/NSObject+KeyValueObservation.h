@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import <KeyValueObservation/SRDKeyValueObservation.h>
 #import <KeyValueObservation/SRDKeyValueObservedChange.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-NS_SWIFT_UNAVAILABLE("Use Swift's KeyPath observing instead")
 @interface NSObject (KeyValueObservation)
 
 /// Creates an registers a Key-Value Observation to the receiving object for the provided index path. The observed change is observed through calling the provided handler block.
@@ -22,7 +22,7 @@ NS_SWIFT_UNAVAILABLE("Use Swift's KeyPath observing instead")
 /// \param changeHandler The handler to call when the receiver fires a KVO event for the provided key path.
 ///
 /// \returns An object that keeps the observation alive. Once this object is deallocated, the block is released no longer receives KVO events.
-- (SRDKeyValueObservation *)observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options changeHandler:(void (^)(id, SRDKeyValueObservedChange *))changeHandler;
+- (SRDKeyValueObservation *)observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options changeHandler:(void (^)(id, SRDKeyValueObservedChange *))changeHandler OBJC_SWIFT_UNAVAILABLE("use Swift's KeyPath observing instead");
 
 @end
 
