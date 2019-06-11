@@ -1,6 +1,7 @@
 # KeyValueObservation
 Block based key-value observations in Objective-C
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d30d31c29f17449481b97a04610ff5b9)](https://app.codacy.com/app/SomeRandomiOSDev/KeyValueObservation?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/KeyValueObservation&utm_campaign=Badge_Grade_Dashboard)
 [![License MIT](https://img.shields.io/cocoapods/l/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
