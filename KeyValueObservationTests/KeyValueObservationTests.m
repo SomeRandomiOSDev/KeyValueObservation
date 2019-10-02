@@ -21,7 +21,7 @@
 @property (nonatomic, assign) NSInteger integer;
 @property (nonatomic, assign) NSInteger integer2;
 
-@property (nonatomic, strong) NSObject* object;
+@property (nonatomic, strong) NSObject *object;
 
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, strong) NSMutableSet *set;
@@ -386,7 +386,7 @@
 }
 
 - (void)testInvalidateAfterFreeLogs {
-    SRDKeyValueObservation* observation;
+    SRDKeyValueObservation *observation;
     @autoreleasepool {
         observation = [[SRDKeyValueObservation alloc] initWithObject:[[DummyClass alloc] init] keyPath:@"integer" options:kNilOptions changeHandler:^(id _, id __) {}];
     }
@@ -395,7 +395,7 @@
 }
 
 - (void)testObservedObjectSetToFromNil {
-    DummyClass* dummy = [[DummyClass alloc] init];
+    DummyClass *dummy = [[DummyClass alloc] init];
     SRDKeyValueObservation *observation;
     __block BOOL first = YES;
 

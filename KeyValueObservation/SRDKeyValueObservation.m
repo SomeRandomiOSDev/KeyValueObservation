@@ -82,7 +82,7 @@ void srd_invalidate_kvo_after_free(void) { asm(""); }
 #pragma mark - Public Methods
 
 - (void)invalidate {
-    NSObject * __strong object = _object;
+    __strong NSObject *object = _object;
     
 #if DEBUG
     if (object == nil && _unownedObject != nil) {
