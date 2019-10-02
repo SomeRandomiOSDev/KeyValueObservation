@@ -51,6 +51,14 @@
 		DDF7571622AA8688002E11D4 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */; };
 		DDF7571722AA8693002E11D4 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568122AA773D002E11D4 /* KeyValueObservationTests.m */; };
 		DDF7571822AA8694002E11D4 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568122AA773D002E11D4 /* KeyValueObservationTests.m */; };
+		DDF7572622AA8F27002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF7572722AA8F27002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
+		DDF7572822AA8F2B002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF7572922AA8F2D002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF7572A22AA8F2F002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF7572B22AA8F33002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
+		DDF7572C22AA8F34002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
+		DDF7572D22AA8F35002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +112,8 @@
 		DDF756EC22AA7854002E11D4 /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF756F422AA7B6E002E11D4 /* KeyValueObservation.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = KeyValueObservation.modulemap; sourceTree = SOURCE_ROOT; };
 		DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyValueObservation.h; sourceTree = "<group>"; };
+		DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKVOInfo.h; sourceTree = "<group>"; };
+		DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKVOInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,8 @@
 				DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */,
 				DDF7568D22AA77B1002E11D4 /* SRDKeyValueObservedChange+Internal.h */,
 				DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */,
+				DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */,
+				DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -248,6 +260,7 @@
 				DDF7570522AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
 				DDF7569B22AA77B2002E11D4 /* SRDKeyValueObservation+Internal.h in Headers */,
 				DDF7569922AA77B2002E11D4 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DDF7572622AA8F27002E11D4 /* SRDKVOInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +271,7 @@
 				DDF756F822AA7BF8002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
 				DDF756F522AA7BF8002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
 				DDF756F622AA7BF8002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
+				DDF7572822AA8F2B002E11D4 /* SRDKVOInfo.h in Headers */,
 				DDF756F722AA7BF8002E11D4 /* SRDKeyValueObservation.h in Headers */,
 				DDF7570622AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
 			);
@@ -270,6 +284,7 @@
 				DDF756FD22AA7BFA002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
 				DDF756FA22AA7BFA002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
 				DDF756FB22AA7BFA002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
+				DDF7572922AA8F2D002E11D4 /* SRDKVOInfo.h in Headers */,
 				DDF756FC22AA7BFA002E11D4 /* SRDKeyValueObservation.h in Headers */,
 				DDF7570722AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
 			);
@@ -282,6 +297,7 @@
 				DDF7570222AA7BFC002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
 				DDF756FF22AA7BFC002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
 				DDF7570022AA7BFC002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
+				DDF7572A22AA8F2F002E11D4 /* SRDKVOInfo.h in Headers */,
 				DDF7570122AA7BFC002E11D4 /* SRDKeyValueObservation.h in Headers */,
 				DDF7570822AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
 			);
@@ -529,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF756A322AA77B2002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
+				DDF7572722AA8F27002E11D4 /* SRDKVOInfo.m in Sources */,
 				DDF7569A22AA77B2002E11D4 /* SRDKeyValueObservation.m in Sources */,
 				DDF756A022AA77B2002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
 				DDF7569D22AA77B2002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
@@ -548,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF7570D22AA8686002E11D4 /* SRDKeyValueObservation.m in Sources */,
+				DDF7572B22AA8F33002E11D4 /* SRDKVOInfo.m in Sources */,
 				DDF7570E22AA8686002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
 				DDF7570B22AA8686002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
 				DDF7570C22AA8686002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
@@ -567,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF7571122AA8687002E11D4 /* SRDKeyValueObservation.m in Sources */,
+				DDF7572C22AA8F34002E11D4 /* SRDKVOInfo.m in Sources */,
 				DDF7571222AA8687002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
 				DDF7570F22AA8687002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
 				DDF7571022AA8687002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
@@ -586,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF7571522AA8688002E11D4 /* SRDKeyValueObservation.m in Sources */,
+				DDF7572D22AA8F35002E11D4 /* SRDKVOInfo.m in Sources */,
 				DDF7571622AA8688002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
 				DDF7571322AA8688002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
 				DDF7571422AA8688002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
