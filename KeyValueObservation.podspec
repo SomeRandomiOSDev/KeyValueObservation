@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
   s.name                = "KeyValueObservation"
-  s.version             = "1.0.1"
+  s.version             = "1.0.2"
   s.summary             = "A small KVO helper library"
   s.description         = <<-DESC
                           A small KVO helper library that provides a NSObject and a NSArray category for observing key value changes using blocks
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source              = { :git => "https://github.com/SomeRandomiOSDev/KeyValueObservation.git", :tag => s.version.to_s }
 
-  s.public_header_files = 'KeyValueObservation/NSObject+KeyValueObservation.h', 'KeyValueObservation/NSArray+KeyValueObservation.h', 'KeyValueObservation/SRDKeyValueObservation.h', 'KeyValueObservation/SRDKeyValueObservedChange.h'
+  s.public_header_files = 'KeyValueObservation/NSObject+KeyValueObservation.h', 'KeyValueObservation/NSArray+KeyValueObservation.h', 'KeyValueObservation/SRDKeyValueObservation.h', 'KeyValueObservation/SRDKeyValueObservedChange.h', 'KeyValueObservation/SRDKVOInfo.h'
   s.source_files        = 'KeyValueObservation/**/*.{h,m}'
   s.frameworks          = 'Foundation'
   s.requires_arc        = true

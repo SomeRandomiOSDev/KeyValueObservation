@@ -74,6 +74,38 @@ NSObject *observation = [array observeKeyPath:keyPath
 }];
 ```
 
+An additional capability of this library is the ability to easily ignore certain Key-Value Observations for the context of a handler block without any additional overhead. For example:
+
+```objc
+@implementation FooBar
+
+...
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"foobar"] && object == self.foobarObject) {
+        // Some action. Won't ever be called from the context of -[FooBar someMethod] given 
+        // the use of -[NSObject performWhileIgnoringObservations:handler:]
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+...
+
+- (void)someMethod {
+    [self performWhileIgnoringObservations:@[[SRDKVOInfo infoWithObserved:self.foobarObject keyPath:@"foobar"]] handler:^{
+        self.foobarObject.foobar = @"foobar";
+    }];
+}
+
+@end
+```
+
+In lieu of having to add flags to your object to determine when or when not to ignore particular Key-Value Observations one can simply do it from the context of a handler block. Any observations that match any of the `SRDKVOInfo` objects passed in to the method will be automatically ignored while executing the block. After the block finishes executing, the observations are once again passed through as normal.
+
+Note that `-[NSObject performWhileIgnoringObservations:handler:]` uses method implementation swizzling to be able to ignore the specified observations, therefore it is important that you do not do any swizzling for the method `-[NSObject observeValueForKeyPath:ofObject:change:context:]` for the receiving class from the context of the handler block. Doing so could lead to unexpected results.  
+
 ## Author
 
 Joseph Newton, somerandomiosdev@gmail.com
