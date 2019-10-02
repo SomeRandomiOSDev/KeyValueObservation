@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import <KeyValueObservation/SRDKVOInfo.h>
 #import <KeyValueObservation/SRDKeyValueObservation.h>
 #import <KeyValueObservation/SRDKeyValueObservedChange.h>
 
@@ -23,6 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// \returns An object that keeps the observation alive. Once this object is deallocated, the block is released no longer receives KVO events.
 - (SRDKeyValueObservation *)observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options changeHandler:(void (^)(id, SRDKeyValueObservedChange *))changeHandler OBJC_SWIFT_UNAVAILABLE("use Swift's KeyPath observing instead");
+
+/// Runs a given handler block synchronously while ignoring all Key-Value Observations specified by the @p observations parameter. This has the same effect as unregistering for each observer/keyPath in @p observations, running the block, then re-registering for each observation.
+///
+/// \param observations An array specifying the Key-Value Observations to ignore.
+/// \param handler The block to run.
+- (void)performWhileIgnoringObservations:(NSArray<SRDKVOInfo *> *)observations handler:(void (^NS_NOESCAPE)(void))handler;
 
 @end
 

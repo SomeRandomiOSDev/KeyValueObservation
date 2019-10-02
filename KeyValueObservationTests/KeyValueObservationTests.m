@@ -21,11 +21,16 @@
 @property (nonatomic, assign) NSInteger integer;
 @property (nonatomic, assign) NSInteger integer2;
 
-@property (nonatomic, strong) NSObject* object;
+@property (nonatomic, strong) NSObject *object;
 
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, strong) NSMutableSet *set;
 
+@end
+
+#pragma mark - Class (DummyClass2) Interface
+
+@interface DummyClass2 : DummyClass
 @end
 
 #pragma mark - Class (KeyValueObservationTests) Interface
@@ -386,7 +391,7 @@
 }
 
 - (void)testInvalidateAfterFreeLogs {
-    SRDKeyValueObservation* observation;
+    SRDKeyValueObservation *observation;
     @autoreleasepool {
         observation = [[SRDKeyValueObservation alloc] initWithObject:[[DummyClass alloc] init] keyPath:@"integer" options:kNilOptions changeHandler:^(id _, id __) {}];
     }
@@ -395,7 +400,7 @@
 }
 
 - (void)testObservedObjectSetToFromNil {
-    DummyClass* dummy = [[DummyClass alloc] init];
+    DummyClass *dummy = [[DummyClass alloc] init];
     SRDKeyValueObservation *observation;
     __block BOOL first = YES;
 
@@ -416,6 +421,93 @@
     dummy.object = nil;
 }
 
+- (void)testKVOInfoMutability {
+    SRDKVOInfo *info = [SRDKVOInfo infoWithObserved:[[NSObject alloc] init] keyPath:@"keyPath"];
+    SRDMutableKVOInfo *mutableInfo = [SRDMutableKVOInfo infoWithObserved:info.observed keyPath:@"keyPath"];
+    SRDMutableKVOInfo *mutableInfo2 = [info mutableCopy];
+
+    XCTAssertEqual(info.observed, mutableInfo.observed);
+    XCTAssertEqual(info.observed, mutableInfo2.observed);
+    XCTAssertTrue([info.keyPath isEqualToString:mutableInfo.keyPath]);
+    XCTAssertTrue([info.keyPath isEqualToString:mutableInfo2.keyPath]);
+
+    mutableInfo.observed = [[NSObject alloc] init];
+    mutableInfo2.keyPath = @"keyPath2";
+
+    XCTAssertNotEqual(info.observed, mutableInfo.observed);
+    XCTAssertNotEqual(mutableInfo2.observed, mutableInfo.observed);
+    XCTAssertFalse([info.keyPath isEqualToString:mutableInfo2.keyPath]);
+    XCTAssertFalse([mutableInfo.keyPath isEqualToString:mutableInfo2.keyPath]);
+}
+
+- (void)testIgnoringObservations {
+    DummyClass *dummy = [[DummyClass alloc] init];
+    __block SRDKeyValueObservation *observation, *observation2;
+    __block BOOL integerWasObserved = NO, integer2WasObserved = NO;
+
+    @autoreleasepool {
+        observation = [dummy observeKeyPath:@"integer" options:NSKeyValueObservingOptionNew changeHandler:^(id object, SRDKeyValueObservedChange *change) {
+            integerWasObserved = YES;
+        }];
+        observation2 = [dummy observeKeyPath:@"integer2" options:NSKeyValueObservingOptionNew changeHandler:^(id object, SRDKeyValueObservedChange *change) {
+            integer2WasObserved = YES;
+        }];
+
+        dummy.integer = 1;
+        dummy.integer2 = 1;
+
+        XCTAssertTrue(integerWasObserved, @"\"integer\" wasn't observed while NOT ignoring any observations");
+        XCTAssertTrue(integer2WasObserved, @"\"integer2\" wasn't observed while NOT ignoring any observations");
+
+        integerWasObserved = NO;
+        integer2WasObserved = NO;
+
+        [observation performWhileIgnoringObservations:@[] handler:^{
+            dummy.integer = 2;
+        }];
+        [observation2 performWhileIgnoringObservations:@[] handler:^{
+            dummy.integer2 = 2;
+        }];
+
+        XCTAssertTrue(integerWasObserved, @"\"integer\" wasn't observed while NOT ignoring any observations");
+        XCTAssertTrue(integer2WasObserved, @"\"integer2\" wasn't observed while NOT ignoring any observations");
+
+        observation = nil;
+        observation2 = nil;
+
+        integerWasObserved = NO;
+        integer2WasObserved = NO;
+    }
+
+    observation = [dummy observeKeyPath:@"integer" options:NSKeyValueObservingOptionNew changeHandler:^(id object, SRDKeyValueObservedChange *change) {
+        integerWasObserved = YES;
+    }];
+    observation2 = [dummy observeKeyPath:@"integer2" options:NSKeyValueObservingOptionNew changeHandler:^(id object, SRDKeyValueObservedChange *change) {
+        integer2WasObserved = YES;
+    }];
+
+    [observation performWhileIgnoringObservations:@[[SRDKVOInfo infoWithObserved:dummy keyPath:@"integer"]] handler:^{
+        dummy.integer = 1;
+        dummy.integer2 = 1;
+    }];
+
+    XCTAssertFalse(integerWasObserved, @"\"integer\" wasn't properly ignored.");
+    XCTAssertTrue(integer2WasObserved, @"\"integer2\" was ignored when only \"integer\" was supposed to be ignored.");
+
+    DummyClass2 *dummy2 = [[DummyClass2 alloc] init];
+    dummy2.integer2 = 0;
+
+    [dummy2 addObserver:dummy2 forKeyPath:@"integer" options:NSKeyValueObservingOptionNew context:NULL];
+    [dummy2 performWhileIgnoringObservations:@[[SRDKVOInfo infoWithObserved:dummy2 keyPath:@"integer"]] handler:^{
+        dummy2.integer = 1;
+    }];
+
+    XCTAssertEqual(dummy2.integer2, 0);
+
+    dummy2.integer = 1;
+    XCTAssertEqual(dummy2.integer2, 11);
+}
+
 #pragma mark - NSObject Overrides
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -433,4 +525,18 @@
 
 @synthesize integer = _integer, integer2 = _integer2, object = _object, array = _array, set = _set;
 
+#pragma mark - NSObject Overrides
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"integer"] && object == self)
+        self.integer2 = 11;
+    else
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+}
+
+@end
+
+#pragma mark - Class (DummyClass2) Implementation
+
+@implementation DummyClass2
 @end
