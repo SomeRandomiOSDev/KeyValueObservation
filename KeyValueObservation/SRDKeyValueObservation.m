@@ -85,9 +85,10 @@ void srd_invalidate_kvo_after_free(void) { asm(""); }
     NSObject * __strong object = _object;
     
 #if DEBUG
-    if (object == nil && _unownedObject != nil)
+    if (object == nil && _unownedObject != nil) {
         NSLog(@"-[%@ %@] called after the observed object was deallocated. Set a symbolic breakpoint for 'srd_invalidate_kvo_after_free' to debug", self.description, NSStringFromSelector(_cmd));
         srd_invalidate_kvo_after_free();
+    }
 #endif // #if DEBUG
     
     if (object != nil) {
