@@ -3,7 +3,7 @@
 //  KeyValueObservationTests
 //
 //  Created by Joseph Newton on 02/05/2019.
-//  Copyright © 2019 Joseph Newton. All rights reserved.
+//  Copyright © 2019 SomeRandomiOSDev. All rights reserved.
 //
 
 @import XCTest;

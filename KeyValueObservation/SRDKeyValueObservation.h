@@ -3,7 +3,7 @@
 //  KeyValueObservation
 //
 //  Created by Joseph Newton on 2/5/19.
-//  Copyright © 2019 Joseph Newton. All rights reserved.
+//  Copyright © 2019 SomeRandomiOSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
