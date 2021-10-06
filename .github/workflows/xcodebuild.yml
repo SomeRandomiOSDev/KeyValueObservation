@@ -1,0 +1,102 @@
+name: Xcode Project
+on: [push, workflow_dispatch]
+
+jobs:
+  ios:
+    name: iOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build iOS
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS" -configuration Debug
+
+    - name: Build iOS Simulator
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS Simulator" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro Max" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+  maccatalyst:
+    name: Mac Catalyst
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=macOS,variant=Mac Catalyst" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+  macos:
+    name: macOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -destination "generic/platform=macOS" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -testPlan "KeyValueObservation macOS Tests" -configuration Debug -enableCodeCoverage YES test
+
+    - name: Upload Code Coverage
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        verbose: true
+
+  tvos:
+    name: tvOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build tvOS
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS" -configuration Debug
+
+    - name: Build tvOS Simulator
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS Simulator" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -testPlan "KeyValueObservation tvOS Tests" -destination "platform=tvOS Simulator,name=Apple TV 4K" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+  watchos:
+    name: watchOS
+    runs-on: macOS-11
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build watchOS
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS" -configuration Debug
+
+    - name: Build watchOS Simulator
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS Simulator" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -testPlan "KeyValueObservation watchOS Tests" -destination "platform=watchOS Simulator,name=Apple Watch Series 6 - 44mm" -configuration Debug ONLY_ACTIVE_ARCH=YES test
