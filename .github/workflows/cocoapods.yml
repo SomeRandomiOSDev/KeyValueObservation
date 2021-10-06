@@ -16,7 +16,7 @@ jobs:
 
     - name: Lint (Dynamic Library)
       run: |
-        pod lib lint
+        pod lib lint --skip-tests
 
     - name: Lint (Static Library)
       run: |
