@@ -108,7 +108,7 @@ Note that `-[NSObject performWhileIgnoringObservations:handler:]` uses method im
 
 ## Author
 
-Joseph Newton, somerandomiosdev@gmail.com
+Joe Newton, somerandomiosdev@gmail.com
 
 ## License
 

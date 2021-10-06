@@ -2,8 +2,7 @@
 //  SRDKeyValueObservation.h
 //  KeyValueObservation
 //
-//  Created by Joseph Newton on 2/5/19.
-//  Copyright © 2019 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,7 +16,7 @@ OBJC_SWIFT_UNAVAILABLE("use Swift's KeyPath observing instead")
 /// Releases the observations associated with the object if they haven't already
 /// been released. This method generally doesn't need to get called as it will
 /// automatically be called when the receiver is deallocated
-- (void)invalidate; // Called automatically upon -dealloc
+- (void)invalidate;
 
 @end
 

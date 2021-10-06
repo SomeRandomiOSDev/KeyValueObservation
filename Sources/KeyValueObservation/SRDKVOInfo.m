@@ -2,8 +2,7 @@
 //  SRDKeyObserverPair.m
 //  KeyValueObservation
 //
-//  Created by Joseph Newton on 2/7/19.
-//  Copyright © 2019 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import "SRDKVOInfo.h"

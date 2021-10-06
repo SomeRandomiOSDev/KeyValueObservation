@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "4D46CB10-0FE6-46DC-A4E5-600C252E5952",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:KeyValueObservation.xcodeproj",
+          "identifier" : "DDF756B322AA782D002E11D4",
+          "name" : "KeyValueObservation macOS"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:KeyValueObservation.xcodeproj",
+        "identifier" : "DDF756BB22AA782D002E11D4",
+        "name" : "KeyValueObservation macOS Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
