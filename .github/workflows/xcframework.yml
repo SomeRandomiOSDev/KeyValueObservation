@@ -24,4 +24,11 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/xcframework.sh --output ${TMPDIR}/KeyValueObservation.xcframework
+        ./scripts/xcframework.sh --build-dir "$TMPDIR"
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: BuildLogs
+        path: ${{ env.TMPDIR }}/Logs/*.log

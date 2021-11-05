@@ -20,11 +20,16 @@ jobs:
     name: Lint
     runs-on: macOS-latest
     env:
+      LOGSDIR: /tmp/.keyvalueobservation.cocoapods/Logs
       LINT_TYPE: ${{ matrix.linttype }}
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
 
     - name: Setup Cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1
@@ -34,7 +39,14 @@ jobs:
     - name: Lint
       run: |
         if [ "$LINT_TYPE" == "Dynamic" ]; then
-            pod lib lint
+            pod lib lint --verbose 2>&1 | tee "$LOGSDIR/PodLint-$LINT_TYPE.log"
         else
-            pod lib lint --use-libraries
+            pod lib lint --verbose --use-libraries 2>&1 | tee "$LOGSDIR/PodLint-$LINT_TYPE.log"
         fi
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: Logs
+        path: ${{ env.LOGSDIR }}/*.log

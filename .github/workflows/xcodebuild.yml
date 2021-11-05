@@ -15,18 +15,24 @@ jobs:
   ios:
     name: iOS
     runs-on: macOS-latest
+    env:
+      LOGSDIR: /tmp/.keyvalueobservation.xcodebuild/iOS/Logs
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Build iOS
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS" -configuration Debug 2>&1 | tee "$LOGSDIR/build-ios.log"
 
     - name: Build iOS Simulator
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS Simulator" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=iOS Simulator" -configuration Debug 2>&1 | tee "$LOGSDIR/build-iossimulator.log"
 
     - name: Test
       run: |
@@ -35,39 +41,65 @@ jobs:
             IOS_SIM = "iPhone 12 Pro" # Fallback Simulator
         fi
 
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=iOS Simulator,name=$IOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=iOS Simulator,name=$IOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test 2>&1 | tee "$LOGSDIR/test-ios.log"
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: iOSBuildLogs
+        path: ${{ env.LOGSDIR }}/*.log
 
   maccatalyst:
     name: Mac Catalyst
     runs-on: macOS-latest
+    env:
+      LOGSDIR: /tmp/.keyvalueobservation.xcodebuild/macCatalyst/Logs
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Build
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=macOS,variant=Mac Catalyst" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -destination "generic/platform=macOS,variant=Mac Catalyst" -configuration Debug 2>&1 | tee "$LOGSDIR/build-maccatalyst.log"
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test 2>&1 | tee "$LOGSDIR/test-maccatalyst.log"
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: MacCatalystBuildLogs
+        path: ${{ env.LOGSDIR }}/*.log
 
   macos:
     name: macOS
     runs-on: macOS-latest
+    env:
+      LOGSDIR: /tmp/.keyvalueobservation.xcodebuild/macOS/Logs
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Build
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -destination "generic/platform=macOS" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -destination "generic/platform=macOS" -configuration Debug 2>&1 | tee "$LOGSDIR/build-macos.log"
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -testPlan "KeyValueObservation macOS Tests" -derivedDataPath ".xcodebuild" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -testPlan "KeyValueObservation macOS Tests" -derivedDataPath ".xcodebuild" -configuration Debug ONLY_ACTIVE_ARCH=YES test 2>&1 | tee "$LOGSDIR/test-macos.log"
 
     - name: Generate Code Coverage File
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -84,21 +116,34 @@ jobs:
         file: ./codecov.lcov
         verbose: true
 
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: macOSBuildLogs
+        path: ${{ env.LOGSDIR }}/*.log
+
   tvos:
     name: tvOS
     runs-on: macOS-latest
+    env:
+      LOGSDIR: /tmp/.keyvalueobservation.xcodebuild/tvOS/Logs
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Build tvOS
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS" -configuration Debug 2>&1 | tee "$LOGSDIR/build-tvos.log"
 
     - name: Build tvOS Simulator
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS Simulator" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -destination "generic/platform=tvOS Simulator" -configuration Debug 2>&1 | tee "$LOGSDIR/build-tvossimulator.log"
 
     - name: Test
       run: |
@@ -107,23 +152,36 @@ jobs:
             TVOS_SIM = "Apple TV" # Fallback Simulator
         fi
 
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -testPlan "KeyValueObservation tvOS Tests" -destination "platform=tvOS Simulator,name=$TVOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -testPlan "KeyValueObservation tvOS Tests" -destination "platform=tvOS Simulator,name=$TVOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test 2>&1 | tee "$LOGSDIR/test-tvos.log"
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: tvOSBuildLogs
+        path: ${{ env.LOGSDIR }}/*.log
 
   watchos:
     name: watchOS
     runs-on: macOS-11
+    env:
+      LOGSDIR: /tmp/.keyvalueobservation.xcodebuild/watchOS/Logs
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Build watchOS
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS" -configuration Debug 2>&1 | tee "$LOGSDIR/build-watchos.log"
 
     - name: Build watchOS Simulator
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS Simulator" -configuration Debug
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -destination "generic/platform=watchOS Simulator" -configuration Debug 2>&1 | tee "$LOGSDIR/build-watchossimulator.log"
 
     - name: Test
       run: |
@@ -132,4 +190,11 @@ jobs:
             WATCHOS_SIM = "Apple Watch Series 6 - 44mm" # Fallback Simulator
         fi
 
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -testPlan "KeyValueObservation watchOS Tests" -destination "platform=watchOS Simulator,name=$WATCHOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -testPlan "KeyValueObservation watchOS Tests" -destination "platform=watchOS Simulator,name=$WATCHOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test 2>&1 | tee "$LOGSDIR/test-watchos.log"
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: watchOSBuildLogs
+        path: ${{ env.LOGSDIR }}/*.log

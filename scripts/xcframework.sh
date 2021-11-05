@@ -20,6 +20,7 @@ function printhelp() {
     HELP+="xcframework.sh [--help | -h] [--output (<output_framework> | <output_folder>)]\n"
     HELP+="               [--configuration <configuration>] [--project-name <project_name>]\n"
     HELP+="               [--exclude-dsyms] [--verbose] [--no-clean | --no-clean-on-fail]\n"
+    HELP+="               [--build-dir <build_dir>]\n"
     HELP+="\n"
     HELP+="--help, -h)         Print this help message and exit.\n"
     HELP+="\n"
@@ -48,6 +49,11 @@ function printhelp() {
     HELP+="--no-clean-on-fail) Same as --no-clean with the exception that if the succeed\n"
     HELP+="                    clean up will continue as normal. This is mutually exclusive\n"
     HELP+="                    with --no-clean, with --no-clean taking precedence.\n"
+    HELP+="\n"
+    HELP+="--build-dir)        The directory in which to store temporary build artifacts\n"
+    HELP+="                    and logs. The directory will be created if needed. If\n"
+    HELP+="                    specified this directory will not be deleted when the\n"
+    HELP+="                    script finishes running.\n"
 
     IFS='%'
     echo -e $HELP 1>&2
@@ -91,6 +97,12 @@ while [[ $# -gt 0 ]]; do
         --no-clean-on-fail)
         NO_CLEAN_ON_FAIL=1
         shift # --no-clean-on-fail
+        ;;
+
+        --build-dir)
+        BUILD_DIR="$2"
+        shift # --build-dir
+        shift # <build_dir>
         ;;
 
         --verbose)
@@ -139,20 +151,29 @@ if [ -z ${CONFIGURATION+x} ]; then
     CONFIGURATION="Release"
 fi
 
-# Create Temporary Directory
+if [ -z ${BUILD_DIR+x} ]; then
+    BUILD_DIR="$(mktemp -d -t ".$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]').xcframework.build")"
+    BUILD_DIR_IS_TEMP=1
+else
+    mkdir -p "$BUILD_DIR"
+    EXIT_CODE=$?
 
-TEMP_DIR="$(mktemp -d -t ".$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]').xcframework.build")"
+    if [ "$EXIT_CODE" != "0" ]; then
+        "$SCRIPTS_DIR/printformat.sh" "foreground:red" "Unable to create build directory: $BUILD_DIR"
+        exit $EXIT_CODE
+    fi
+fi
 
 # Function Declarations
 
 function cleanup() {
     cd "$CURRENT_DIR"
-    if [[ "$VERBOSE" != "1" && ("$NO_CLEAN" == "1" || ("$NO_CLEAN_ON_FAIL" == "1" && "$EXIT_CODE" != "0")) ]]; then
+    if [[ "$VERBOSE" != "1" && "$BUILD_DIR_IS_TEMP" == "1" && ("$NO_CLEAN" == "1" || ("$NO_CLEAN_ON_FAIL" == "1" && "$EXIT_CODE" != "0")) ]]; then
         if [ "$EXIT_CODE" == "0" ]; then
-            "$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "Build Directory: $TEMP_DIR"
+            "$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "Build Directory: $BUILD_DIR"
         fi
-    else
-        rm -rf "$TEMP_DIR"
+    elif [ "$BUILD_DIR_IS_TEMP" == "1" ]; then
+        rm -rf "$BUILD_DIR"
     fi
 
     #
@@ -176,11 +197,11 @@ function checkresult() {
 }
 
 function createlogfile() {
-    if [ ! -d "$TEMP_DIR/Logs" ]; then
-        mkdir -p "$TEMP_DIR/Logs"
+    if [ ! -d "$BUILD_DIR/Logs" ]; then
+        mkdir -p "$BUILD_DIR/Logs"
     fi
 
-    local LOG="$TEMP_DIR/Logs/$1.log"
+    local LOG="$BUILD_DIR/Logs/$1.log"
     touch "$LOG"
 
     echo "$LOG"
@@ -264,14 +285,14 @@ for PLATFORM in "iOS" "iOS Simulator" "Mac Catalyst" "macOS" "tvOS" "tvOS Simula
     #
 
     if [ "$VERBOSE" == "1" ]; then
-        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${TEMP_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive
+        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive
     else
         LOG="$(createlogfile "$ARCHIVE-build")"
         ERROR_MESSAGE="$(errormessage "$LOG")"
 
         #
 
-        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${TEMP_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive > "$LOG" 2>&1
+        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive > "$LOG" 2>&1
     fi
 
     checkresult $? "$ERROR_MESSAGE"
@@ -285,7 +306,7 @@ fi
 
 ARGUMENTS=(-create-xcframework -output "${OUTPUT}")
 
-for ARCHIVE in ${TEMP_DIR}/*.xcarchive; do
+for ARCHIVE in ${BUILD_DIR}/*.xcarchive; do
     ARGUMENTS=(${ARGUMENTS[@]} -framework "${ARCHIVE}/Products/Library/Frameworks/${PROJECT_NAME}.framework")
 
     if [ "$EXCLUDE_DSYMS" != "1" ]; then
