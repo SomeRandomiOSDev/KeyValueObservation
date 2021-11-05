@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     tags-ignore:
-      - **
+      - '**'
     paths-ignore:
       - .gitignore
       - LICENSE
