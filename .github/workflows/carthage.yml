@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Environment
-      run |
+      run: |
         touch "$LOGFILE"
 
     - name: Install Carthage

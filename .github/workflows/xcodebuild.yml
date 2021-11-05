@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name Setup Environment
+    - name: Setup Environment
       run: |
         mkdir -p "$LOGSDIR"
 
@@ -60,7 +60,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name Setup Environment
+    - name: Setup Environment
       run: |
         mkdir -p "$LOGSDIR"
 
@@ -89,7 +89,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name Setup Environment
+    - name: Setup Environment
       run: |
         mkdir -p "$LOGSDIR"
 
@@ -133,7 +133,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name Setup Environment
+    - name: Setup Environment
       run: |
         mkdir -p "$LOGSDIR"
 
@@ -171,7 +171,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name Setup Environment
+    - name: Setup Environment
       run: |
         mkdir -p "$LOGSDIR"
 
