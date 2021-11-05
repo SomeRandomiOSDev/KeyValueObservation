@@ -16,7 +16,7 @@ jobs:
     name: Build
     runs-on: macOS-latest
     env:
-      LOGFILE: /tmp/.keyvalueobservation.carthage.xcodebuild.log
+      LOGSDIR: /tmp/.keyvalueobservation.carthage/Logs
 
     steps:
     - name: Checkout Code
@@ -24,7 +24,8 @@ jobs:
 
     - name: Setup Environment
       run: |
-        touch "$LOGFILE"
+        mkdir -p "$LOGSDIR"
+        touch "$LOGSDIR/Build.log"
 
     - name: Install Carthage
       run: |
@@ -41,11 +42,11 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/carthage.sh update --log-path "$LOGFILE"
+        ./scripts/carthage.sh update --log-path "$LOGSDIR/Build.log"
 
     - name: Upload Logs
       uses: actions/upload-artifact@v2
       if: always()
       with:
         name: BuildLog
-        path: ${{ env.LOGFILE }}
+        path: ${{ env.LOGSDIR }}/*.log
