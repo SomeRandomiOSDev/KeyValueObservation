@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "C11DF0B8-3166-4D2A-81CA-06B56AA8ABCD",
+      "id" : "A045C1A3-FB6D-4C3E-9102-7A44F742221D",
       "name" : "Default",
       "options" : {
 
@@ -13,7 +13,7 @@
       "targets" : [
         {
           "containerPath" : "container:KeyValueObservation.xcodeproj",
-          "identifier" : "DDF756CF22AA7841002E11D4",
+          "identifier" : "DD86D58B23D11CA00046E63E",
           "name" : "KeyValueObservation tvOS"
         }
       ]
@@ -23,7 +23,7 @@
     {
       "target" : {
         "containerPath" : "container:KeyValueObservation.xcodeproj",
-        "identifier" : "DDF756D722AA7841002E11D4",
+        "identifier" : "DD86D59323D11CA00046E63E",
         "name" : "KeyValueObservation tvOS Tests"
       }
     }

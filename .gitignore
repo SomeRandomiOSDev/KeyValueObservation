@@ -1,2 +1,5 @@
 KeyValueObservation.xcodeproj/project.xcworkspace
 KeyValueObservation.xcodeproj/xcuserdata
+
+.xcodebuild
+scripts/build

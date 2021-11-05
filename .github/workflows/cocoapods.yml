@@ -1,10 +1,25 @@
 name: Cocoapods
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    tags-ignore:
+      - **
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
 
 jobs:
   lint:
+    strategy:
+      matrix:
+        linttype: [Dynamic, Static]
+
     name: Lint
     runs-on: macOS-latest
+    env:
+      LINT_TYPE: ${{ matrix.linttype }}
+
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
@@ -14,10 +29,10 @@ jobs:
       with:
         version: latest
 
-    - name: Lint (Dynamic Library)
+    - name: Lint
       run: |
-        pod lib lint --skip-tests
-
-    - name: Lint (Static Library)
-      run: |
-        pod lib lint --use-libraries --skip-tests
+        if [ "$LINT_TYPE" == "Dynamic" ]; then
+            pod lib lint
+        else
+            pod lib lint --use-libraries
+        fi

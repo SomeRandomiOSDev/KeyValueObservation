@@ -1,5 +1,13 @@
 name: Xcode Project
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    tags-ignore:
+      - **
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
 
 jobs:
   ios:
@@ -20,7 +28,12 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro Max" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        IOS_SIM="$(xcrun simctl list devices available | grep "iPhone [0-9]" | sort -rV | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
+        if [ "${#IOS_SIM}" == "0" ]; then
+            IOS_SIM = "iPhone 12 Pro" # Fallback Simulator
+        fi
+
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation" -testPlan "KeyValueObservationTests" -destination "platform=iOS Simulator,name=$IOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
   maccatalyst:
     name: Mac Catalyst
@@ -52,13 +65,21 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -testPlan "KeyValueObservation macOS Tests" -configuration Debug -enableCodeCoverage YES test
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation macOS" -testPlan "KeyValueObservation macOS Tests" -derivedDataPath ".xcodebuild" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+    - name: Generate Code Coverage File
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      run: |
+        PROFDATA_FILE="$(find .xcodebuild -name "*.profdata")"
+
+        xcrun llvm-cov export --format=lcov --instr-profile="$PROFDATA_FILE" ".xcodebuild/Build/Products/Debug/KeyValueObservationTests.xctest/Contents/MacOS/KeyValueObservationTests" > "./codecov.lcov"
 
     - name: Upload Code Coverage
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./codecov.lcov
         verbose: true
 
   tvos:
@@ -79,7 +100,12 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -testPlan "KeyValueObservation tvOS Tests" -destination "platform=tvOS Simulator,name=Apple TV 4K" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        TVOS_SIM="$(xcrun simctl list devices available | grep "Apple TV" | sort -V | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
+        if [ "${#TVOS_SIM}" == "0" ]; then
+            TVOS_SIM = "Apple TV" # Fallback Simulator
+        fi
+
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation tvOS" -testPlan "KeyValueObservation tvOS Tests" -destination "platform=tvOS Simulator,name=$TVOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
   watchos:
     name: watchOS
@@ -99,4 +125,9 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -testPlan "KeyValueObservation watchOS Tests" -destination "platform=watchOS Simulator,name=Apple Watch Series 6 - 44mm" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        WATCHOS_SIM="$(xcrun simctl list devices available | grep "Apple Watch" | sort -rV | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
+        if [ "${#WATCHOS_SIM}" == "0" ]; then
+            WATCHOS_SIM = "Apple Watch Series 6 - 44mm" # Fallback Simulator
+        fi
+
+        xcodebuild -project KeyValueObservation.xcodeproj -scheme "KeyValueObservation watchOS" -testPlan "KeyValueObservation watchOS Tests" -destination "platform=watchOS Simulator,name=$WATCHOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test

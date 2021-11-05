@@ -1,5 +1,13 @@
 name: XCFramework
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    tags-ignore:
+      - **
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
 
 jobs:
   build:
@@ -14,4 +22,4 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/xcframework.sh -output ${TMPDIR}/KeyValueObservation.xcframework
+        ./scripts/xcframework.sh --output ${TMPDIR}/KeyValueObservation.xcframework

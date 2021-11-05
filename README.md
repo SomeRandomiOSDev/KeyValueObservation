@@ -1,17 +1,22 @@
 # KeyValueObservation
-Block based key-value observations in Objective-C
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d30d31c29f17449481b97a04610ff5b9)](https://app.codacy.com/app/SomeRandomiOSDev/KeyValueObservation?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/KeyValueObservation&utm_campaign=Badge_Grade_Dashboard)
 [![License MIT](https://img.shields.io/cocoapods/l/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
 [![Platform](https://img.shields.io/cocoapods/p/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
-[![Build](https://travis-ci.com/SomeRandomiOSDev/KeyValueObservation.svg?branch=master)](https://travis-ci.com/SomeRandomiOSDev/KeyValueObservation)
 [![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation)
+
+![Carthage](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Carthage/badge.svg)
+![Cocoapods](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Cocoapods/badge.svg)
+![XCFramework](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcframework.yml/badge.svg)
+![Xcode Project](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Xcode%20Project/badge.svg)
+
+Block based key-value observations in Objective-C
 
 ## Installation
 
-KeyValueObservation is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). 
+**KeyValueObservation** is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). 
 
 To install via CocoaPods, simply add the following line to your Podfile:
 
@@ -106,10 +111,14 @@ In lieu of having to add flags to your object to determine when or when not to i
 
 Note that `-[NSObject performWhileIgnoringObservations:handler:]` uses method implementation swizzling to be able to ignore the specified observations, therefore it is important that you do not do any swizzling for the method `-[NSObject observeValueForKeyPath:ofObject:change:context:]` for the receiving class from the context of the handler block. Doing so could lead to unexpected results.  
 
+## Contributing
+
+If you have need for a specific feature or you encounter a bug, please open an issue. If you extend the functionality of **KeyValueObservation** yourself or you feel like fixing a bug yourself, please submit a pull request.
+
 ## Author
 
 Joe Newton, somerandomiosdev@gmail.com
 
 ## License
 
-KeyValueObservation is available under the MIT license. See the LICENSE file for more info.
+**KeyValueObservation** is available under the MIT license. See the `LICENSE` file for more info.

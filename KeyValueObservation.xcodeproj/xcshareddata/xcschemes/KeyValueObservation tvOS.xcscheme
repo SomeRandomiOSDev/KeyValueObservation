@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1310"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+               BlueprintIdentifier = "DD86D58B23D11CA00046E63E"
                BuildableName = "KeyValueObservation.framework"
                BlueprintName = "KeyValueObservation tvOS"
                ReferencedContainer = "container:KeyValueObservation.xcodeproj">
@@ -26,45 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
-            BuildableName = "KeyValueObservation.framework"
-            BlueprintName = "KeyValueObservation tvOS"
-            ReferencedContainer = "container:KeyValueObservation.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
-            BuildableName = "KeyValueObservation.framework"
-            BlueprintName = "KeyValueObservation tvOS"
-            ReferencedContainer = "container:KeyValueObservation.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
             reference = "container:Tests/Test Plans/KeyValueObservation tvOS Tests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDF756D722AA7841002E11D4"
-               BuildableName = "KeyValueObservationTests.xctest"
-               BlueprintName = "KeyValueObservation tvOS Tests"
-               ReferencedContainer = "container:KeyValueObservation.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -76,15 +44,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
-            BuildableName = "KeyValueObservation.framework"
-            BlueprintName = "KeyValueObservation tvOS"
-            ReferencedContainer = "container:KeyValueObservation.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -95,7 +54,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDF756CF22AA7841002E11D4"
+            BlueprintIdentifier = "DD86D58B23D11CA00046E63E"
             BuildableName = "KeyValueObservation.framework"
             BlueprintName = "KeyValueObservation tvOS"
             ReferencedContainer = "container:KeyValueObservation.xcodeproj">
