@@ -16,7 +16,7 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/xcframework.sh -output ${TMPDIR}/KeyValueObservation.xcframework
+        ./scripts/xcframework.sh --output ${TMPDIR}/KeyValueObservation.xcframework
 
     - name: Create Zip
       run: |

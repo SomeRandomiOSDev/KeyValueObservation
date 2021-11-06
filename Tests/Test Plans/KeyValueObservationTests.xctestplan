@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "563C18E6-C9E6-49DD-8E58-EA82A025CEEA",
+      "id" : "EDFB1169-07E4-464B-85CC-6F011C5D5E19",
       "name" : "Default",
       "options" : {
 
@@ -13,7 +13,7 @@
       "targets" : [
         {
           "containerPath" : "container:KeyValueObservation.xcodeproj",
-          "identifier" : "DDF7567222AA773D002E11D4",
+          "identifier" : "DD86D53C23D11B3E0046E63E",
           "name" : "KeyValueObservation"
         }
       ]
@@ -23,7 +23,7 @@
     {
       "target" : {
         "containerPath" : "container:KeyValueObservation.xcodeproj",
-        "identifier" : "DDF7567B22AA773D002E11D4",
+        "identifier" : "DD86D54523D11B3E0046E63E",
         "name" : "KeyValueObservationTests"
       }
     }

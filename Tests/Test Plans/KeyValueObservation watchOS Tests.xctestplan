@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "8B9FBD31-9C16-44EF-B009-D8C15EB5A5B8",
+      "id" : "DEA19715-A3B6-4505-B81C-B0DC1C1C2C40",
       "name" : "Default",
       "options" : {
 
@@ -13,7 +13,7 @@
       "targets" : [
         {
           "containerPath" : "container:KeyValueObservation.xcodeproj",
-          "identifier" : "DDF756EB22AA7854002E11D4",
+          "identifier" : "DD86D5C323D11D140046E63E",
           "name" : "KeyValueObservation watchOS"
         }
       ]
@@ -23,7 +23,7 @@
     {
       "target" : {
         "containerPath" : "container:KeyValueObservation.xcodeproj",
-        "identifier" : "DD48BC7D270DD2C400D842BC",
+        "identifier" : "DD48BC93270E0DE800D842BC",
         "name" : "KeyValueObservation watchOS Tests"
       }
     }

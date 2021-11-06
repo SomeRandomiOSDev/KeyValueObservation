@@ -6,187 +6,206 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DD2FBC27258BE8BB00DB3211 /* XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */;
+			buildPhases = (
+				DD2FBC33258BE8C600DB3211 /* Build XCFramework */,
+			);
+			dependencies = (
+			);
+			name = XCFramework;
+			productName = XCFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		DD48BC6E270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */; };
-		DD48BC6F270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */; };
-		DD48BC70270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */; };
-		DD48BC82270DD2C400D842BC /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF756EC22AA7854002E11D4 /* KeyValueObservation.framework */; };
-		DD48BC88270DD2CB00D842BC /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */; };
-		DDF7567D22AA773D002E11D4 /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF7567322AA773D002E11D4 /* KeyValueObservation.framework */; };
-		DDF7569922AA77B2002E11D4 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7568D22AA77B1002E11D4 /* SRDKeyValueObservedChange+Internal.h */; };
-		DDF7569A22AA77B2002E11D4 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */; };
-		DDF7569B22AA77B2002E11D4 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7568F22AA77B1002E11D4 /* SRDKeyValueObservation+Internal.h */; };
-		DDF7569D22AA77B2002E11D4 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */; };
-		DDF7569F22AA77B2002E11D4 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756A022AA77B2002E11D4 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */; };
-		DDF756A122AA77B2002E11D4 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756A222AA77B2002E11D4 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756A322AA77B2002E11D4 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */; };
-		DDF756A422AA77B2002E11D4 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756BD22AA782D002E11D4 /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF756B422AA782D002E11D4 /* KeyValueObservation.framework */; };
-		DDF756D922AA7841002E11D4 /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF756D022AA7841002E11D4 /* KeyValueObservation.framework */; };
-		DDF756F522AA7BF8002E11D4 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756F622AA7BF8002E11D4 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756F722AA7BF8002E11D4 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756F822AA7BF8002E11D4 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756FA22AA7BFA002E11D4 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756FB22AA7BFA002E11D4 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756FC22AA7BFA002E11D4 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756FD22AA7BFA002E11D4 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF756FF22AA7BFC002E11D4 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570022AA7BFC002E11D4 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570122AA7BFC002E11D4 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570222AA7BFC002E11D4 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570522AA7C34002E11D4 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570622AA7C34002E11D4 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570722AA7C34002E11D4 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570822AA7C34002E11D4 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7570B22AA8686002E11D4 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */; };
-		DDF7570C22AA8686002E11D4 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */; };
-		DDF7570D22AA8686002E11D4 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */; };
-		DDF7570E22AA8686002E11D4 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */; };
-		DDF7570F22AA8687002E11D4 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */; };
-		DDF7571022AA8687002E11D4 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */; };
-		DDF7571122AA8687002E11D4 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */; };
-		DDF7571222AA8687002E11D4 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */; };
-		DDF7571322AA8688002E11D4 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */; };
-		DDF7571422AA8688002E11D4 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */; };
-		DDF7571522AA8688002E11D4 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */; };
-		DDF7571622AA8688002E11D4 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */; };
-		DDF7572622AA8F27002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7572722AA8F27002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
-		DDF7572822AA8F2B002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7572922AA8F2D002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7572A22AA8F2F002E11D4 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF7572B22AA8F33002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
-		DDF7572C22AA8F34002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
-		DDF7572D22AA8F35002E11D4 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */; };
+		DD48BC98270E0DE800D842BC /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D5C423D11D140046E63E /* KeyValueObservation.framework */; };
+		DD66300D2732C1C800CFF12F /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66300E2732C1C800CFF12F /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66300F2732C1C800CFF12F /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630102732C1C800CFF12F /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630112732C1C800CFF12F /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630122732C1C800CFF12F /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630132732C1C800CFF12F /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630142732C1C800CFF12F /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630152732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630162732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630172732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630182732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630192732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301A2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301B2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301C2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301D2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301E2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD66301F2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630202732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630212732C1C800CFF12F /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630222732C1C800CFF12F /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630232732C1C900CFF12F /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630242732C1C900CFF12F /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6630252732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */; };
+		DD6630262732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */; };
+		DD6630272732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */; };
+		DD6630282732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */; };
+		DD6630292732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */; };
+		DD66302A2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */; };
+		DD66302B2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */; };
+		DD66302C2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */; };
+		DD66302D2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */; };
+		DD66302E2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */; };
+		DD66302F2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */; };
+		DD6630302732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */; };
+		DD6630312732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */; };
+		DD6630322732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */; };
+		DD6630332732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */; };
+		DD6630342732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */; };
+		DD6630352732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */; };
+		DD6630362732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */; };
+		DD6630372732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */; };
+		DD6630382732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */; };
+		DD6630392732C1C900CFF12F /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */; };
+		DD66303A2732C1C900CFF12F /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */; };
+		DD66303B2732C1C900CFF12F /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */; };
+		DD66303C2732C1C900CFF12F /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */; };
+		DD66303D2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */; };
+		DD66303E2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */; };
+		DD66303F2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */; };
+		DD6630402732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */; };
+		DD6630422732C29000CFF12F /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630412732C29000CFF12F /* KeyValueObservationTests.m */; };
+		DD6630432732C29000CFF12F /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630412732C29000CFF12F /* KeyValueObservationTests.m */; };
+		DD6630442732C29000CFF12F /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630412732C29000CFF12F /* KeyValueObservationTests.m */; };
+		DD6630452732C29000CFF12F /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6630412732C29000CFF12F /* KeyValueObservationTests.m */; };
+		DD86D54723D11B3E0046E63E /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */; };
+		DD86D57923D11C860046E63E /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* KeyValueObservation.framework */; };
+		DD86D59523D11CA00046E63E /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D58C23D11CA00046E63E /* KeyValueObservation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DD48BC83270DD2C400D842BC /* PBXContainerItemProxy */ = {
+		DD48BC99270E0DE800D842BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF756EB22AA7854002E11D4;
+			remoteGlobalIDString = DD86D5C323D11D140046E63E;
 			remoteInfo = "KeyValueObservation watchOS";
 		};
-		DDF7567E22AA773D002E11D4 /* PBXContainerItemProxy */ = {
+		DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF7567222AA773D002E11D4;
+			remoteGlobalIDString = DD86D53C23D11B3E0046E63E;
 			remoteInfo = KeyValueObservation;
 		};
-		DDF756BE22AA782D002E11D4 /* PBXContainerItemProxy */ = {
+		DD86D57A23D11C860046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF756B322AA782D002E11D4;
+			remoteGlobalIDString = DD86D56F23D11C860046E63E;
 			remoteInfo = "KeyValueObservation macOS";
 		};
-		DDF756DA22AA7841002E11D4 /* PBXContainerItemProxy */ = {
+		DD86D59623D11CA00046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF756CF22AA7841002E11D4;
+			remoteGlobalIDString = DD86D58B23D11CA00046E63E;
 			remoteInfo = "KeyValueObservation tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservationTests.m; sourceTree = "<group>"; };
-		DD48BC75270DCFE900D842BC /* KeyValueObservation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "KeyValueObservation-Info.plist"; path = "Plists/KeyValueObservation-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DD48BC76270DCFE900D842BC /* KeyValueObservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "KeyValueObservationTests-Info.plist"; path = "Plists/KeyValueObservationTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DD48BC77270DD03600D842BC /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = SOURCE_ROOT; };
-		DD48BC78270DD06200D842BC /* scripts */ = {isa = PBXFileReference; lastKnownFileType = text; path = scripts; sourceTree = SOURCE_ROOT; };
-		DD48BC79270DD06C00D842BC /* workflows */ = {isa = PBXFileReference; lastKnownFileType = text; name = workflows; path = .github/workflows; sourceTree = SOURCE_ROOT; };
-		DD48BC7E270DD2C400D842BC /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD48BC8C270DFDE300D842BC /* KeyValueObservation watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation watchOS Tests.xctestplan"; sourceTree = "<group>"; };
-		DD48BC8D270DFE1000D842BC /* KeyValueObservation tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation tvOS Tests.xctestplan"; sourceTree = "<group>"; };
-		DD48BC8E270DFE3D00D842BC /* KeyValueObservation macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation macOS Tests.xctestplan"; sourceTree = "<group>"; };
-		DD48BC8F270DFE7B00D842BC /* KeyValueObservationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyValueObservationTests.xctestplan; sourceTree = "<group>"; };
-		DDF7567322AA773D002E11D4 /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF7567C22AA773D002E11D4 /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF7568D22AA77B1002E11D4 /* SRDKeyValueObservedChange+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservedChange+Internal.h"; sourceTree = "<group>"; };
-		DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservation.m; sourceTree = "<group>"; };
-		DDF7568F22AA77B1002E11D4 /* SRDKeyValueObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservation+Internal.h"; sourceTree = "<group>"; };
-		DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservedChange.m; sourceTree = "<group>"; };
-		DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservation.h; sourceTree = "<group>"; };
-		DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KeyValueObservation.m"; sourceTree = "<group>"; };
-		DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KeyValueObservation.h"; sourceTree = "<group>"; };
-		DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KeyValueObservation.h"; sourceTree = "<group>"; };
-		DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KeyValueObservation.m"; sourceTree = "<group>"; };
-		DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservedChange.h; sourceTree = "<group>"; };
-		DDF756A722AA77DE002E11D4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		DDF756A822AA77DE002E11D4 /* KeyValueObservation.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KeyValueObservation.podspec; sourceTree = SOURCE_ROOT; };
-		DDF756A922AA77DE002E11D4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		DDF756B422AA782D002E11D4 /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756BC22AA782D002E11D4 /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756D022AA7841002E11D4 /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756D822AA7841002E11D4 /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756EC22AA7854002E11D4 /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756F422AA7B6E002E11D4 /* KeyValueObservation.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = KeyValueObservation.modulemap; sourceTree = SOURCE_ROOT; };
-		DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyValueObservation.h; path = Sources/KeyValueObservation/KeyValueObservation.h; sourceTree = "<group>"; };
-		DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKVOInfo.h; sourceTree = "<group>"; };
-		DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKVOInfo.m; sourceTree = "<group>"; };
+		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		DD48BC94270E0DE800D842BC /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD48BC9F270E0F4500D842BC /* KeyValueObservationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyValueObservationTests.xctestplan; sourceTree = "<group>"; };
+		DD48BCA0270E0F9A00D842BC /* KeyValueObservation macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation macOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BCA1270E0FE200D842BC /* KeyValueObservation tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation tvOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BCA2270E101D00D842BC /* KeyValueObservation watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation watchOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD5D044A261FA56400BA0FC2 /* KeyValueObservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyValueObservationTests-Info.plist"; path = "Plists/KeyValueObservationTests-Info.plist"; sourceTree = "<group>"; };
+		DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKVOInfo.h; sourceTree = "<group>"; };
+		DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObservation.h; sourceTree = "<group>"; };
+		DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KeyValueObservation.h"; sourceTree = "<group>"; };
+		DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservedChange.h; sourceTree = "<group>"; };
+		DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KeyValueObservation.h"; sourceTree = "<group>"; };
+		DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservation.h; sourceTree = "<group>"; };
+		DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservation+Internal.h"; sourceTree = "<group>"; };
+		DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KeyValueObservation.m"; sourceTree = "<group>"; };
+		DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservation.m; sourceTree = "<group>"; };
+		DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KeyValueObservation.m"; sourceTree = "<group>"; };
+		DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservedChange.m; sourceTree = "<group>"; };
+		DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKVOInfo.m; sourceTree = "<group>"; };
+		DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservedChange+Internal.h"; sourceTree = "<group>"; };
+		DD6630412732C29000CFF12F /* KeyValueObservationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservationTests.m; sourceTree = "<group>"; };
+		DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D54123D11B3E0046E63E /* KeyValueObservation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyValueObservation-Info.plist"; path = "Plists/KeyValueObservation-Info.plist"; sourceTree = "<group>"; };
+		DD86D54623D11B3E0046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57023D11C860046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57823D11C860046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D58C23D11CA00046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D59423D11CA00046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5C423D11D140046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		DD86D5E023D22DB90046E63E /* KeyValueObservation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = KeyValueObservation.podspec; sourceTree = SOURCE_ROOT; };
+		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
+		DDB1DE5C2405EEE300C20FED /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD48BC7B270DD2C400D842BC /* Frameworks */ = {
+		DD48BC91270E0DE800D842BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD48BC82270DD2C400D842BC /* KeyValueObservation.framework in Frameworks */,
+				DD48BC98270E0DE800D842BC /* KeyValueObservation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567022AA773D002E11D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF7567922AA773D002E11D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF7567D22AA773D002E11D4 /* KeyValueObservation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF756B122AA782D002E11D4 /* Frameworks */ = {
+		DD86D53A23D11B3E0046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B922AA782D002E11D4 /* Frameworks */ = {
+		DD86D54323D11B3E0046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756BD22AA782D002E11D4 /* KeyValueObservation.framework in Frameworks */,
+				DD86D54723D11B3E0046E63E /* KeyValueObservation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CD22AA7841002E11D4 /* Frameworks */ = {
+		DD86D56D23D11C860046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D522AA7841002E11D4 /* Frameworks */ = {
+		DD86D57523D11C860046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756D922AA7841002E11D4 /* KeyValueObservation.framework in Frameworks */,
+				DD86D57923D11C860046E63E /* KeyValueObservation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E922AA7854002E11D4 /* Frameworks */ = {
+		DD86D58923D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D59123D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD86D59523D11CA00046E63E /* KeyValueObservation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C123D11D140046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,197 +215,218 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD48BC6C270DCF6700D842BC /* Tests */ = {
+		DD48BC9E270E0F1300D842BC /* Test Plans */ = {
 			isa = PBXGroup;
 			children = (
-				DD48BC8A270DFDAD00D842BC /* KeyValueObservationTests */,
-				DD48BC8B270DFDC400D842BC /* Test Plans */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		DD48BC89270DFD8000D842BC /* KeyValueObservation */ = {
-			isa = PBXGroup;
-			children = (
-				DDF7569622AA77B1002E11D4 /* NSObject+KeyValueObservation.h */,
-				DDF7569722AA77B1002E11D4 /* NSObject+KeyValueObservation.m */,
-				DDF7569522AA77B1002E11D4 /* NSArray+KeyValueObservation.h */,
-				DDF7569422AA77B1002E11D4 /* NSArray+KeyValueObservation.m */,
-				DDF7569322AA77B1002E11D4 /* SRDKeyValueObservation.h */,
-				DDF7568F22AA77B1002E11D4 /* SRDKeyValueObservation+Internal.h */,
-				DDF7568E22AA77B1002E11D4 /* SRDKeyValueObservation.m */,
-				DDF7569822AA77B2002E11D4 /* SRDKeyValueObservedChange.h */,
-				DDF7568D22AA77B1002E11D4 /* SRDKeyValueObservedChange+Internal.h */,
-				DDF7569122AA77B1002E11D4 /* SRDKeyValueObservedChange.m */,
-				DDF7572422AA8F27002E11D4 /* SRDKVOInfo.h */,
-				DDF7572522AA8F27002E11D4 /* SRDKVOInfo.m */,
-			);
-			path = KeyValueObservation;
-			sourceTree = "<group>";
-		};
-		DD48BC8A270DFDAD00D842BC /* KeyValueObservationTests */ = {
-			isa = PBXGroup;
-			children = (
-				DD48BC6D270DCF7A00D842BC /* KeyValueObservationTests.m */,
-			);
-			path = KeyValueObservationTests;
-			sourceTree = "<group>";
-		};
-		DD48BC8B270DFDC400D842BC /* Test Plans */ = {
-			isa = PBXGroup;
-			children = (
-				DD48BC8F270DFE7B00D842BC /* KeyValueObservationTests.xctestplan */,
-				DD48BC8E270DFE3D00D842BC /* KeyValueObservation macOS Tests.xctestplan */,
-				DD48BC8D270DFE1000D842BC /* KeyValueObservation tvOS Tests.xctestplan */,
-				DD48BC8C270DFDE300D842BC /* KeyValueObservation watchOS Tests.xctestplan */,
+				DD48BC9F270E0F4500D842BC /* KeyValueObservationTests.xctestplan */,
+				DD48BCA0270E0F9A00D842BC /* KeyValueObservation macOS Tests.xctestplan */,
+				DD48BCA1270E0FE200D842BC /* KeyValueObservation tvOS Tests.xctestplan */,
+				DD48BCA2270E101D00D842BC /* KeyValueObservation watchOS Tests.xctestplan */,
 			);
 			path = "Test Plans";
 			sourceTree = "<group>";
 		};
-		DDF7566922AA773D002E11D4 = {
+		DD5D04E52621361600BA0FC2 /* KeyValueObservation */ = {
 			isa = PBXGroup;
 			children = (
-				DDF7567522AA773D002E11D4 /* KeyValueObservation */,
-				DDF7567422AA773D002E11D4 /* Products */,
+				DD662FFD2732C1C800CFF12F /* include */,
+				DD6630052732C1C800CFF12F /* src */,
+			);
+			path = KeyValueObservation;
+			sourceTree = "<group>";
+		};
+		DD5D04F22621362400BA0FC2 /* KeyValueObservationTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD6630412732C29000CFF12F /* KeyValueObservationTests.m */,
+			);
+			path = KeyValueObservationTests;
+			sourceTree = "<group>";
+		};
+		DD662FFD2732C1C800CFF12F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DD662FFF2732C1C800CFF12F /* KeyValueObservation.h */,
+				DD6630002732C1C800CFF12F /* NSArray+KeyValueObservation.h */,
+				DD6630022732C1C800CFF12F /* NSObject+KeyValueObservation.h */,
+				DD6630032732C1C800CFF12F /* SRDKeyValueObservation.h */,
+				DD6630012732C1C800CFF12F /* SRDKeyValueObservedChange.h */,
+				DD662FFE2732C1C800CFF12F /* SRDKVOInfo.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DD6630052732C1C800CFF12F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD6630072732C1C800CFF12F /* NSArray+KeyValueObservation.m */,
+				DD6630092732C1C800CFF12F /* NSObject+KeyValueObservation.m */,
+				DD6630062732C1C800CFF12F /* SRDKeyValueObservation+Internal.h */,
+				DD6630082732C1C800CFF12F /* SRDKeyValueObservation.m */,
+				DD66300C2732C1C800CFF12F /* SRDKeyValueObservedChange+Internal.h */,
+				DD66300A2732C1C800CFF12F /* SRDKeyValueObservedChange.m */,
+				DD66300B2732C1C800CFF12F /* SRDKVOInfo.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DD86D53323D11B3E0046E63E = {
+			isa = PBXGroup;
+			children = (
+				DD86D53F23D11B3E0046E63E /* KeyValueObservation */,
+				DD86D53E23D11B3E0046E63E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DDF7567422AA773D002E11D4 /* Products */ = {
+		DD86D53E23D11B3E0046E63E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDF7567322AA773D002E11D4 /* KeyValueObservation.framework */,
-				DDF7567C22AA773D002E11D4 /* KeyValueObservationTests.xctest */,
-				DDF756B422AA782D002E11D4 /* KeyValueObservation.framework */,
-				DDF756BC22AA782D002E11D4 /* KeyValueObservationTests.xctest */,
-				DDF756D022AA7841002E11D4 /* KeyValueObservation.framework */,
-				DDF756D822AA7841002E11D4 /* KeyValueObservationTests.xctest */,
-				DDF756EC22AA7854002E11D4 /* KeyValueObservation.framework */,
-				DD48BC7E270DD2C400D842BC /* KeyValueObservationTests.xctest */,
+				DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */,
+				DD86D54623D11B3E0046E63E /* KeyValueObservationTests.xctest */,
+				DD86D57023D11C860046E63E /* KeyValueObservation.framework */,
+				DD86D57823D11C860046E63E /* KeyValueObservationTests.xctest */,
+				DD86D58C23D11CA00046E63E /* KeyValueObservation.framework */,
+				DD86D59423D11CA00046E63E /* KeyValueObservationTests.xctest */,
+				DD86D5C423D11D140046E63E /* KeyValueObservation.framework */,
+				DD48BC94270E0DE800D842BC /* KeyValueObservationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DDF7567522AA773D002E11D4 /* KeyValueObservation */ = {
+		DD86D53F23D11B3E0046E63E /* KeyValueObservation */ = {
 			isa = PBXGroup;
 			children = (
-				DDF756A522AA77B6002E11D4 /* Sources */,
-				DD48BC6C270DCF6700D842BC /* Tests */,
-				DDF756A622AA77C1002E11D4 /* Supporting Files */,
+				DDB1DE252405EE5F00C20FED /* Sources */,
+				DDB1DE502405EE9900C20FED /* Tests */,
+				DD86D55B23D11BA80046E63E /* Supporting Files */,
 			);
 			name = KeyValueObservation;
 			sourceTree = "<group>";
 		};
-		DDF756A522AA77B6002E11D4 /* Sources */ = {
+		DD86D55B23D11BA80046E63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD48BC89270DFD8000D842BC /* KeyValueObservation */,
+				DD17A9F9257744BC00D30599 /* scripts */,
+				DDA26DBD256EA4D700E1C6D7 /* workflows */,
+				DD86D5E023D22DB90046E63E /* KeyValueObservation.podspec */,
+				DDB1DE5C2405EEE300C20FED /* codecov.yml */,
+				DD86D5E123D22DB90046E63E /* README.md */,
+				DD86D5DE23D22DB90046E63E /* LICENSE */,
+				DD86D54123D11B3E0046E63E /* KeyValueObservation-Info.plist */,
+				DD5D044A261FA56400BA0FC2 /* KeyValueObservationTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB1DE252405EE5F00C20FED /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D04E52621361600BA0FC2 /* KeyValueObservation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		DDF756A622AA77C1002E11D4 /* Supporting Files */ = {
+		DDB1DE502405EE9900C20FED /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DD48BC78270DD06200D842BC /* scripts */,
-				DD48BC79270DD06C00D842BC /* workflows */,
-				DDF756A822AA77DE002E11D4 /* KeyValueObservation.podspec */,
-				DDF756F422AA7B6E002E11D4 /* KeyValueObservation.modulemap */,
-				DDF7570422AA7C34002E11D4 /* KeyValueObservation.h */,
-				DD48BC77270DD03600D842BC /* codecov.yml */,
-				DDF756A722AA77DE002E11D4 /* README.md */,
-				DDF756A922AA77DE002E11D4 /* LICENSE */,
-				DD48BC75270DCFE900D842BC /* KeyValueObservation-Info.plist */,
-				DD48BC76270DCFE900D842BC /* KeyValueObservationTests-Info.plist */,
+				DD5D04F22621362400BA0FC2 /* KeyValueObservationTests */,
+				DD48BC9E270E0F1300D842BC /* Test Plans */,
 			);
-			name = "Supporting Files";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DDF7566E22AA773D002E11D4 /* Headers */ = {
+		DD86D53823D11B3E0046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756A422AA77B2002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
-				DDF756A222AA77B2002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
-				DDF7569F22AA77B2002E11D4 /* SRDKeyValueObservation.h in Headers */,
-				DDF756A122AA77B2002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
-				DDF7570522AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
-				DDF7569B22AA77B2002E11D4 /* SRDKeyValueObservation+Internal.h in Headers */,
-				DDF7569922AA77B2002E11D4 /* SRDKeyValueObservedChange+Internal.h in Headers */,
-				DDF7572622AA8F27002E11D4 /* SRDKVOInfo.h in Headers */,
+				DD66301D2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */,
+				DD66303D2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD6630192732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */,
+				DD66300D2732C1C800CFF12F /* SRDKVOInfo.h in Headers */,
+				DD6630252732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD6630152732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */,
+				DD6630112732C1C800CFF12F /* KeyValueObservation.h in Headers */,
+				DD6630212732C1C800CFF12F /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756AF22AA782D002E11D4 /* Headers */ = {
+		DD86D56B23D11C860046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756F822AA7BF8002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
-				DDF756F522AA7BF8002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
-				DDF756F622AA7BF8002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
-				DDF7572822AA8F2B002E11D4 /* SRDKVOInfo.h in Headers */,
-				DDF756F722AA7BF8002E11D4 /* SRDKeyValueObservation.h in Headers */,
-				DDF7570622AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
+				DD66301E2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */,
+				DD66303E2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD66301A2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */,
+				DD66300E2732C1C800CFF12F /* SRDKVOInfo.h in Headers */,
+				DD6630262732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD6630162732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */,
+				DD6630122732C1C800CFF12F /* KeyValueObservation.h in Headers */,
+				DD6630222732C1C800CFF12F /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CB22AA7841002E11D4 /* Headers */ = {
+		DD86D58723D11CA00046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756FD22AA7BFA002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
-				DDF756FA22AA7BFA002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
-				DDF756FB22AA7BFA002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
-				DDF7572922AA8F2D002E11D4 /* SRDKVOInfo.h in Headers */,
-				DDF756FC22AA7BFA002E11D4 /* SRDKeyValueObservation.h in Headers */,
-				DDF7570722AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
+				DD66301F2732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */,
+				DD66303F2732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD66301B2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */,
+				DD66300F2732C1C800CFF12F /* SRDKVOInfo.h in Headers */,
+				DD6630272732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD6630172732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */,
+				DD6630132732C1C800CFF12F /* KeyValueObservation.h in Headers */,
+				DD6630232732C1C900CFF12F /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E722AA7854002E11D4 /* Headers */ = {
+		DD86D5BF23D11D140046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7570222AA7BFC002E11D4 /* SRDKeyValueObservedChange.h in Headers */,
-				DDF756FF22AA7BFC002E11D4 /* NSArray+KeyValueObservation.h in Headers */,
-				DDF7570022AA7BFC002E11D4 /* NSObject+KeyValueObservation.h in Headers */,
-				DDF7572A22AA8F2F002E11D4 /* SRDKVOInfo.h in Headers */,
-				DDF7570122AA7BFC002E11D4 /* SRDKeyValueObservation.h in Headers */,
-				DDF7570822AA7C34002E11D4 /* KeyValueObservation.h in Headers */,
+				DD6630202732C1C800CFF12F /* NSObject+KeyValueObservation.h in Headers */,
+				DD6630402732C1C900CFF12F /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD66301C2732C1C800CFF12F /* SRDKeyValueObservedChange.h in Headers */,
+				DD6630102732C1C800CFF12F /* SRDKVOInfo.h in Headers */,
+				DD6630282732C1C900CFF12F /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD6630182732C1C800CFF12F /* NSArray+KeyValueObservation.h in Headers */,
+				DD6630142732C1C800CFF12F /* KeyValueObservation.h in Headers */,
+				DD6630242732C1C900CFF12F /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DD48BC7D270DD2C400D842BC /* KeyValueObservation watchOS Tests */ = {
+		DD48BC93270E0DE800D842BC /* KeyValueObservation watchOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD48BC85270DD2C400D842BC /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS Tests" */;
+			buildConfigurationList = DD48BC9D270E0DE800D842BC /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS Tests" */;
 			buildPhases = (
-				DD48BC7A270DD2C400D842BC /* Sources */,
-				DD48BC7B270DD2C400D842BC /* Frameworks */,
-				DD48BC7C270DD2C400D842BC /* Resources */,
+				DD48BC90270E0DE800D842BC /* Sources */,
+				DD48BC91270E0DE800D842BC /* Frameworks */,
+				DD48BC92270E0DE800D842BC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD48BC84270DD2C400D842BC /* PBXTargetDependency */,
+				DD48BC9A270E0DE800D842BC /* PBXTargetDependency */,
 			);
 			name = "KeyValueObservation watchOS Tests";
 			productName = "KeyValueObservation watchOS Tests";
-			productReference = DD48BC7E270DD2C400D842BC /* KeyValueObservationTests.xctest */;
+			productReference = DD48BC94270E0DE800D842BC /* KeyValueObservationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF7567222AA773D002E11D4 /* KeyValueObservation */ = {
+		DD86D53C23D11B3E0046E63E /* KeyValueObservation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF7568722AA773D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation" */;
+			buildConfigurationList = DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation" */;
 			buildPhases = (
-				DDF7566E22AA773D002E11D4 /* Headers */,
-				DDF7566F22AA773D002E11D4 /* Sources */,
-				DDF7567022AA773D002E11D4 /* Frameworks */,
-				DDF7567122AA773D002E11D4 /* Resources */,
+				DD86D53823D11B3E0046E63E /* Headers */,
+				DD86D53923D11B3E0046E63E /* Sources */,
+				DD86D53A23D11B3E0046E63E /* Frameworks */,
+				DD86D53B23D11B3E0046E63E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -394,35 +434,35 @@
 			);
 			name = KeyValueObservation;
 			productName = KeyValueObservation;
-			productReference = DDF7567322AA773D002E11D4 /* KeyValueObservation.framework */;
+			productReference = DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF7567B22AA773D002E11D4 /* KeyValueObservationTests */ = {
+		DD86D54523D11B3E0046E63E /* KeyValueObservationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF7568A22AA773D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservationTests" */;
+			buildConfigurationList = DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservationTests" */;
 			buildPhases = (
-				DDF7567822AA773D002E11D4 /* Sources */,
-				DDF7567922AA773D002E11D4 /* Frameworks */,
-				DDF7567A22AA773D002E11D4 /* Resources */,
+				DD86D54223D11B3E0046E63E /* Sources */,
+				DD86D54323D11B3E0046E63E /* Frameworks */,
+				DD86D54423D11B3E0046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF7567F22AA773D002E11D4 /* PBXTargetDependency */,
+				DD86D54923D11B3E0046E63E /* PBXTargetDependency */,
 			);
 			name = KeyValueObservationTests;
 			productName = KeyValueObservationTests;
-			productReference = DDF7567C22AA773D002E11D4 /* KeyValueObservationTests.xctest */;
+			productReference = DD86D54623D11B3E0046E63E /* KeyValueObservationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756B322AA782D002E11D4 /* KeyValueObservation macOS */ = {
+		DD86D56F23D11C860046E63E /* KeyValueObservation macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756C522AA782D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS" */;
+			buildConfigurationList = DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS" */;
 			buildPhases = (
-				DDF756AF22AA782D002E11D4 /* Headers */,
-				DDF756B022AA782D002E11D4 /* Sources */,
-				DDF756B122AA782D002E11D4 /* Frameworks */,
-				DDF756B222AA782D002E11D4 /* Resources */,
+				DD86D56B23D11C860046E63E /* Headers */,
+				DD86D56C23D11C860046E63E /* Sources */,
+				DD86D56D23D11C860046E63E /* Frameworks */,
+				DD86D56E23D11C860046E63E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -430,35 +470,35 @@
 			);
 			name = "KeyValueObservation macOS";
 			productName = "KeyValueObservation macOS";
-			productReference = DDF756B422AA782D002E11D4 /* KeyValueObservation.framework */;
+			productReference = DD86D57023D11C860046E63E /* KeyValueObservation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF756BB22AA782D002E11D4 /* KeyValueObservation macOS Tests */ = {
+		DD86D57723D11C860046E63E /* KeyValueObservation macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756C822AA782D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS Tests" */;
+			buildConfigurationList = DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS Tests" */;
 			buildPhases = (
-				DDF756B822AA782D002E11D4 /* Sources */,
-				DDF756B922AA782D002E11D4 /* Frameworks */,
-				DDF756BA22AA782D002E11D4 /* Resources */,
+				DD86D57423D11C860046E63E /* Sources */,
+				DD86D57523D11C860046E63E /* Frameworks */,
+				DD86D57623D11C860046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF756BF22AA782D002E11D4 /* PBXTargetDependency */,
+				DD86D57B23D11C860046E63E /* PBXTargetDependency */,
 			);
 			name = "KeyValueObservation macOS Tests";
 			productName = "KeyValueObservation macOSTests";
-			productReference = DDF756BC22AA782D002E11D4 /* KeyValueObservationTests.xctest */;
+			productReference = DD86D57823D11C860046E63E /* KeyValueObservationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756CF22AA7841002E11D4 /* KeyValueObservation tvOS */ = {
+		DD86D58B23D11CA00046E63E /* KeyValueObservation tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756E122AA7841002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS" */;
+			buildConfigurationList = DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS" */;
 			buildPhases = (
-				DDF756CB22AA7841002E11D4 /* Headers */,
-				DDF756CC22AA7841002E11D4 /* Sources */,
-				DDF756CD22AA7841002E11D4 /* Frameworks */,
-				DDF756CE22AA7841002E11D4 /* Resources */,
+				DD86D58723D11CA00046E63E /* Headers */,
+				DD86D58823D11CA00046E63E /* Sources */,
+				DD86D58923D11CA00046E63E /* Frameworks */,
+				DD86D58A23D11CA00046E63E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -466,35 +506,35 @@
 			);
 			name = "KeyValueObservation tvOS";
 			productName = "KeyValueObservation tvOS";
-			productReference = DDF756D022AA7841002E11D4 /* KeyValueObservation.framework */;
+			productReference = DD86D58C23D11CA00046E63E /* KeyValueObservation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF756D722AA7841002E11D4 /* KeyValueObservation tvOS Tests */ = {
+		DD86D59323D11CA00046E63E /* KeyValueObservation tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756E422AA7841002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS Tests" */;
+			buildConfigurationList = DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS Tests" */;
 			buildPhases = (
-				DDF756D422AA7841002E11D4 /* Sources */,
-				DDF756D522AA7841002E11D4 /* Frameworks */,
-				DDF756D622AA7841002E11D4 /* Resources */,
+				DD86D59023D11CA00046E63E /* Sources */,
+				DD86D59123D11CA00046E63E /* Frameworks */,
+				DD86D59223D11CA00046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF756DB22AA7841002E11D4 /* PBXTargetDependency */,
+				DD86D59723D11CA00046E63E /* PBXTargetDependency */,
 			);
 			name = "KeyValueObservation tvOS Tests";
 			productName = "KeyValueObservation tvOSTests";
-			productReference = DDF756D822AA7841002E11D4 /* KeyValueObservationTests.xctest */;
+			productReference = DD86D59423D11CA00046E63E /* KeyValueObservationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756EB22AA7854002E11D4 /* KeyValueObservation watchOS */ = {
+		DD86D5C323D11D140046E63E /* KeyValueObservation watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756F122AA7854002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS" */;
+			buildConfigurationList = DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS" */;
 			buildPhases = (
-				DDF756E722AA7854002E11D4 /* Headers */,
-				DDF756E822AA7854002E11D4 /* Sources */,
-				DDF756E922AA7854002E11D4 /* Frameworks */,
-				DDF756EA22AA7854002E11D4 /* Resources */,
+				DD86D5BF23D11D140046E63E /* Headers */,
+				DD86D5C023D11D140046E63E /* Sources */,
+				DD86D5C123D11D140046E63E /* Frameworks */,
+				DD86D5C223D11D140046E63E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -502,45 +542,58 @@
 			);
 			name = "KeyValueObservation watchOS";
 			productName = "KeyValueObservation watchOS";
-			productReference = DDF756EC22AA7854002E11D4 /* KeyValueObservation.framework */;
+			productReference = DD86D5C423D11D140046E63E /* KeyValueObservation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DDF7566A22AA773D002E11D4 /* Project object */ = {
+		DD86D53423D11B3E0046E63E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1300;
-				ORGANIZATIONNAME = "Some Random iOS Dev";
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
-					DD48BC7D270DD2C400D842BC = {
-						CreatedOnToolsVersion = 13.0;
+					DD2FBC27258BE8BB00DB3211 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF7567222AA773D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD48BC93270E0DE800D842BC = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF7567B22AA773D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D53C23D11B3E0046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF756B322AA782D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D54523D11B3E0046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF756BB22AA782D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D56F23D11C860046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF756CF22AA7841002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D57723D11C860046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF756D722AA7841002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D58B23D11CA00046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
-					DDF756EB22AA7854002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
+					DD86D59323D11CA00046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					DD86D5C323D11D140046E63E = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
-			buildConfigurationList = DDF7566D22AA773D002E11D4 /* Build configuration list for PBXProject "KeyValueObservation" */;
+			buildConfigurationList = DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "KeyValueObservation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -548,74 +601,75 @@
 				en,
 				Base,
 			);
-			mainGroup = DDF7566922AA773D002E11D4;
-			productRefGroup = DDF7567422AA773D002E11D4 /* Products */;
+			mainGroup = DD86D53323D11B3E0046E63E;
+			productRefGroup = DD86D53E23D11B3E0046E63E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DDF7567222AA773D002E11D4 /* KeyValueObservation */,
-				DDF7567B22AA773D002E11D4 /* KeyValueObservationTests */,
-				DDF756B322AA782D002E11D4 /* KeyValueObservation macOS */,
-				DDF756BB22AA782D002E11D4 /* KeyValueObservation macOS Tests */,
-				DDF756CF22AA7841002E11D4 /* KeyValueObservation tvOS */,
-				DDF756D722AA7841002E11D4 /* KeyValueObservation tvOS Tests */,
-				DDF756EB22AA7854002E11D4 /* KeyValueObservation watchOS */,
-				DD48BC7D270DD2C400D842BC /* KeyValueObservation watchOS Tests */,
+				DD86D53C23D11B3E0046E63E /* KeyValueObservation */,
+				DD86D54523D11B3E0046E63E /* KeyValueObservationTests */,
+				DD86D56F23D11C860046E63E /* KeyValueObservation macOS */,
+				DD86D57723D11C860046E63E /* KeyValueObservation macOS Tests */,
+				DD86D58B23D11CA00046E63E /* KeyValueObservation tvOS */,
+				DD86D59323D11CA00046E63E /* KeyValueObservation tvOS Tests */,
+				DD86D5C323D11D140046E63E /* KeyValueObservation watchOS */,
+				DD48BC93270E0DE800D842BC /* KeyValueObservation watchOS Tests */,
+				DD2FBC27258BE8BB00DB3211 /* XCFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DD48BC7C270DD2C400D842BC /* Resources */ = {
+		DD48BC92270E0DE800D842BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567122AA773D002E11D4 /* Resources */ = {
+		DD86D53B23D11B3E0046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567A22AA773D002E11D4 /* Resources */ = {
+		DD86D54423D11B3E0046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B222AA782D002E11D4 /* Resources */ = {
+		DD86D56E23D11C860046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756BA22AA782D002E11D4 /* Resources */ = {
+		DD86D57623D11C860046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CE22AA7841002E11D4 /* Resources */ = {
+		DD86D58A23D11CA00046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D622AA7841002E11D4 /* Resources */ = {
+		DD86D59223D11CA00046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756EA22AA7854002E11D4 /* Resources */ = {
+		DD86D5C223D11D140046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -624,118 +678,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DD2FBC33258BE8C600DB3211 /* Build XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh --configuration ${CONFIGURATION} --output \"${BUILD_DIR}/${CONFIGURATION}-universal/KeyValueObservation.xcframework\" \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		DD48BC7A270DD2C400D842BC /* Sources */ = {
+		DD48BC90270E0DE800D842BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD48BC88270DD2CB00D842BC /* KeyValueObservationTests.m in Sources */,
+				DD6630452732C29000CFF12F /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7566F22AA773D002E11D4 /* Sources */ = {
+		DD86D53923D11B3E0046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756A322AA77B2002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
-				DDF7572722AA8F27002E11D4 /* SRDKVOInfo.m in Sources */,
-				DDF7569A22AA77B2002E11D4 /* SRDKeyValueObservation.m in Sources */,
-				DDF756A022AA77B2002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
-				DDF7569D22AA77B2002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
+				DD66302D2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */,
+				DD6630352732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */,
+				DD6630292732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */,
+				DD6630312732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */,
+				DD6630392732C1C900CFF12F /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567822AA773D002E11D4 /* Sources */ = {
+		DD86D54223D11B3E0046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD48BC6E270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */,
+				DD6630422732C29000CFF12F /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B022AA782D002E11D4 /* Sources */ = {
+		DD86D56C23D11C860046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7570D22AA8686002E11D4 /* SRDKeyValueObservation.m in Sources */,
-				DDF7572B22AA8F33002E11D4 /* SRDKVOInfo.m in Sources */,
-				DDF7570E22AA8686002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
-				DDF7570B22AA8686002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
-				DDF7570C22AA8686002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
+				DD66302E2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */,
+				DD6630362732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */,
+				DD66302A2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */,
+				DD6630322732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */,
+				DD66303A2732C1C900CFF12F /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B822AA782D002E11D4 /* Sources */ = {
+		DD86D57423D11C860046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD48BC6F270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */,
+				DD6630432732C29000CFF12F /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CC22AA7841002E11D4 /* Sources */ = {
+		DD86D58823D11CA00046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7571122AA8687002E11D4 /* SRDKeyValueObservation.m in Sources */,
-				DDF7572C22AA8F34002E11D4 /* SRDKVOInfo.m in Sources */,
-				DDF7571222AA8687002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
-				DDF7570F22AA8687002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
-				DDF7571022AA8687002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
+				DD66302F2732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */,
+				DD6630372732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */,
+				DD66302B2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */,
+				DD6630332732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */,
+				DD66303B2732C1C900CFF12F /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D422AA7841002E11D4 /* Sources */ = {
+		DD86D59023D11CA00046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD48BC70270DCF7A00D842BC /* KeyValueObservationTests.m in Sources */,
+				DD6630442732C29000CFF12F /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E822AA7854002E11D4 /* Sources */ = {
+		DD86D5C023D11D140046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7571522AA8688002E11D4 /* SRDKeyValueObservation.m in Sources */,
-				DDF7572D22AA8F35002E11D4 /* SRDKVOInfo.m in Sources */,
-				DDF7571622AA8688002E11D4 /* SRDKeyValueObservedChange.m in Sources */,
-				DDF7571322AA8688002E11D4 /* NSObject+KeyValueObservation.m in Sources */,
-				DDF7571422AA8688002E11D4 /* NSArray+KeyValueObservation.m in Sources */,
+				DD6630302732C1C900CFF12F /* SRDKeyValueObservation.m in Sources */,
+				DD6630382732C1C900CFF12F /* SRDKeyValueObservedChange.m in Sources */,
+				DD66302C2732C1C900CFF12F /* NSArray+KeyValueObservation.m in Sources */,
+				DD6630342732C1C900CFF12F /* NSObject+KeyValueObservation.m in Sources */,
+				DD66303C2732C1C900CFF12F /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD48BC84270DD2C400D842BC /* PBXTargetDependency */ = {
+		DD48BC9A270E0DE800D842BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF756EB22AA7854002E11D4 /* KeyValueObservation watchOS */;
-			targetProxy = DD48BC83270DD2C400D842BC /* PBXContainerItemProxy */;
+			target = DD86D5C323D11D140046E63E /* KeyValueObservation watchOS */;
+			targetProxy = DD48BC99270E0DE800D842BC /* PBXContainerItemProxy */;
 		};
-		DDF7567F22AA773D002E11D4 /* PBXTargetDependency */ = {
+		DD86D54923D11B3E0046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF7567222AA773D002E11D4 /* KeyValueObservation */;
-			targetProxy = DDF7567E22AA773D002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D53C23D11B3E0046E63E /* KeyValueObservation */;
+			targetProxy = DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */;
 		};
-		DDF756BF22AA782D002E11D4 /* PBXTargetDependency */ = {
+		DD86D57B23D11C860046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF756B322AA782D002E11D4 /* KeyValueObservation macOS */;
-			targetProxy = DDF756BE22AA782D002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D56F23D11C860046E63E /* KeyValueObservation macOS */;
+			targetProxy = DD86D57A23D11C860046E63E /* PBXContainerItemProxy */;
 		};
-		DDF756DB22AA7841002E11D4 /* PBXTargetDependency */ = {
+		DD86D59723D11CA00046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF756CF22AA7841002E11D4 /* KeyValueObservation tvOS */;
-			targetProxy = DDF756DA22AA7841002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D58B23D11CA00046E63E /* KeyValueObservation tvOS */;
+			targetProxy = DD86D59623D11CA00046E63E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DD48BC86270DD2C400D842BC /* Debug */ = {
+		DD2FBC28258BE8BB00DB3211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD2FBC29258BE8BB00DB3211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD48BC9B270E0DE800D842BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
@@ -748,15 +838,15 @@
 				PRODUCT_NAME = KeyValueObservationTests;
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
 		};
-		DD48BC87270DD2C400D842BC /* Release */ = {
+		DD48BC9C270E0DE800D842BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
@@ -769,11 +859,12 @@
 				PRODUCT_NAME = KeyValueObservationTests;
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
 		};
-		DDF7568522AA773D002E11D4 /* Debug */ = {
+		DD86D54F23D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -799,7 +890,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -832,6 +923,9 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -839,7 +933,7 @@
 			};
 			name = Debug;
 		};
-		DDF7568622AA773D002E11D4 /* Release */ = {
+		DD86D55023D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -865,7 +959,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -891,6 +985,9 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -899,9 +996,10 @@
 			};
 			name = Release;
 		};
-		DDF7568822AA773D002E11D4 /* Debug */ = {
+		DD86D55223D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -915,17 +1013,19 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
-		DDF7568922AA773D002E11D4 /* Release */ = {
+		DD86D55323D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -939,15 +1039,15 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
-		DDF7568B22AA773D002E11D4 /* Debug */ = {
+		DD86D55523D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -964,7 +1064,7 @@
 			};
 			name = Debug;
 		};
-		DDF7568C22AA773D002E11D4 /* Release */ = {
+		DD86D55623D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -981,9 +1081,10 @@
 			};
 			name = Release;
 		};
-		DDF756C622AA782D002E11D4 /* Debug */ = {
+		DD86D58223D11C870046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -991,7 +1092,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Plists/KeyValueObservation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -999,17 +1099,19 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		DDF756C722AA782D002E11D4 /* Release */ = {
+		DD86D58323D11C870046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1017,7 +1119,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Plists/KeyValueObservation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1025,36 +1126,18 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		DDF756C922AA782D002E11D4 /* Debug */ = {
+		DD86D58523D11C870046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservationtests;
-				PRODUCT_NAME = KeyValueObservationTests;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		DDF756CA22AA782D002E11D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1064,16 +1147,38 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservationtests;
 				PRODUCT_NAME = KeyValueObservationTests;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD86D58623D11C870046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservationtests;
+				PRODUCT_NAME = KeyValueObservationTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		DDF756E222AA7841002E11D4 /* Debug */ = {
+		DD86D59E23D11CA00046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1087,18 +1192,20 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
 		};
-		DDF756E322AA7841002E11D4 /* Release */ = {
+		DD86D59F23D11CA00046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1112,18 +1219,19 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
 		};
-		DDF756E522AA7841002E11D4 /* Debug */ = {
+		DD86D5A123D11CA00046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
@@ -1135,14 +1243,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservationtests;
 				PRODUCT_NAME = KeyValueObservationTests;
 				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.2;
 			};
 			name = Debug;
 		};
-		DDF756E622AA7841002E11D4 /* Release */ = {
+		DD86D5A223D11CA00046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/KeyValueObservationTests-Info.plist";
@@ -1154,15 +1264,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservationtests;
 				PRODUCT_NAME = KeyValueObservationTests;
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.2;
 			};
 			name = Release;
 		};
-		DDF756F222AA7854002E11D4 /* Debug */ = {
+		DD86D5CA23D11D140046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1176,19 +1287,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
 		};
-		DDF756F322AA7854002E11D4 /* Release */ = {
+		DD86D5CB23D11D140046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1202,11 +1315,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = KeyValueObservation.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.keyvalueobservation;
 				PRODUCT_NAME = KeyValueObservation;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
@@ -1214,88 +1327,97 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD48BC85270DD2C400D842BC /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS Tests" */ = {
+		DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD48BC86270DD2C400D842BC /* Debug */,
-				DD48BC87270DD2C400D842BC /* Release */,
+				DD2FBC28258BE8BB00DB3211 /* Debug */,
+				DD2FBC29258BE8BB00DB3211 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7566D22AA773D002E11D4 /* Build configuration list for PBXProject "KeyValueObservation" */ = {
+		DD48BC9D270E0DE800D842BC /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568522AA773D002E11D4 /* Debug */,
-				DDF7568622AA773D002E11D4 /* Release */,
+				DD48BC9B270E0DE800D842BC /* Debug */,
+				DD48BC9C270E0DE800D842BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7568722AA773D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation" */ = {
+		DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "KeyValueObservation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568822AA773D002E11D4 /* Debug */,
-				DDF7568922AA773D002E11D4 /* Release */,
+				DD86D54F23D11B3E0046E63E /* Debug */,
+				DD86D55023D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7568A22AA773D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservationTests" */ = {
+		DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568B22AA773D002E11D4 /* Debug */,
-				DDF7568C22AA773D002E11D4 /* Release */,
+				DD86D55223D11B3E0046E63E /* Debug */,
+				DD86D55323D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756C522AA782D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS" */ = {
+		DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756C622AA782D002E11D4 /* Debug */,
-				DDF756C722AA782D002E11D4 /* Release */,
+				DD86D55523D11B3E0046E63E /* Debug */,
+				DD86D55623D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756C822AA782D002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS Tests" */ = {
+		DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756C922AA782D002E11D4 /* Debug */,
-				DDF756CA22AA782D002E11D4 /* Release */,
+				DD86D58223D11C870046E63E /* Debug */,
+				DD86D58323D11C870046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756E122AA7841002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS" */ = {
+		DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756E222AA7841002E11D4 /* Debug */,
-				DDF756E322AA7841002E11D4 /* Release */,
+				DD86D58523D11C870046E63E /* Debug */,
+				DD86D58623D11C870046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756E422AA7841002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS Tests" */ = {
+		DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756E522AA7841002E11D4 /* Debug */,
-				DDF756E622AA7841002E11D4 /* Release */,
+				DD86D59E23D11CA00046E63E /* Debug */,
+				DD86D59F23D11CA00046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756F122AA7854002E11D4 /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS" */ = {
+		DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation tvOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756F222AA7854002E11D4 /* Debug */,
-				DDF756F322AA7854002E11D4 /* Release */,
+				DD86D5A123D11CA00046E63E /* Debug */,
+				DD86D5A223D11CA00046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "KeyValueObservation watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D5CA23D11D140046E63E /* Debug */,
+				DD86D5CB23D11D140046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DDF7566A22AA773D002E11D4 /* Project object */;
+	rootObject = DD86D53423D11B3E0046E63E /* Project object */;
 }

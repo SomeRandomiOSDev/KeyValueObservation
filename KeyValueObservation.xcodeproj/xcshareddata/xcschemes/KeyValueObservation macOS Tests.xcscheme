@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1310"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDF756B322AA782D002E11D4"
+            BlueprintIdentifier = "DD86D56F23D11C860046E63E"
             BuildableName = "KeyValueObservation.framework"
             BlueprintName = "KeyValueObservation macOS"
             ReferencedContainer = "container:KeyValueObservation.xcodeproj">
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDF756BB22AA782D002E11D4"
+               BlueprintIdentifier = "DD86D57723D11C860046E63E"
                BuildableName = "KeyValueObservationTests.xctest"
                BlueprintName = "KeyValueObservation macOS Tests"
                ReferencedContainer = "container:KeyValueObservation.xcodeproj">

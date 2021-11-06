@@ -1,0 +1,3 @@
+module KeyValueObservation {
+  umbrella header "KeyValueObservation.h"
+}
