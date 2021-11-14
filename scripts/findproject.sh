@@ -47,6 +47,7 @@ while [[ $# -gt 0 ]]; do
         echo -e "Unknown argument: $1\n" 1>&2
         EXIT_CODE=1
         printhelp
+        ;;
     esac
 done
 

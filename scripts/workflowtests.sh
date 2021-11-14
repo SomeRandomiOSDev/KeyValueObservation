@@ -95,6 +95,7 @@ while [[ $# -gt 0 ]]; do
         "$SCRIPTS_DIR/printformat.sh" "foreground:red" "Unknown argument: $1\n" 1>&2
         EXIT_CODE=1
         printhelp
+        ;;
     esac
 done
 
@@ -198,7 +199,7 @@ function errormessage() {
     local ERROR_MESSAGE="$1"
 
     if [[ "$NO_CLEAN" == "1" ]] || [[ "$NO_CLEAN_ON_FAIL" == "1" ]]; then
-        ERROR_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:default" "${1%.}. See xcodebuild log for more details: $("$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "$2")")"
+        ERROR_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:default" "${1%.}. See log for more details: $("$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "$2")")"
     elif [ "$VERBOSE" != "1" ]; then
         ERROR_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:default" "${1%.}. Use the '--no-clean' or '--no-clean-on-fail' flag to inspect the logs.")"
     fi
@@ -270,7 +271,7 @@ if which pod >/dev/null; then
     "$SCRIPTS_DIR/versions.sh" "$PODS_VERSION" "1.7.3"
 
     if [ $? -ge 0 ]; then
-        echo "CocoaPods: $(pod --version)"
+        echo "CocoaPods: $PODS_VERSION"
     else
         checkresult -1 "These unit tests require version 1.7.3 or later of CocoaPods: $("$SCRIPTS_DIR/printformat.sh" "foreground:blue;underline" "https://guides.cocoapods.org/using/getting-started.html#updating-cocoapods")"
     fi
@@ -280,7 +281,7 @@ fi
 
 # Run Tests
 
-printstep "Running Tests..."
+printstep "Running Tests...\n"
 
 ### Carthage Workflow
 
@@ -324,9 +325,11 @@ printstep "'xcframework.yml' Workflow Tests Passed\n"
 
 printstep "Testing 'upload-assets.yml' Workflow..."
 
+echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Creating zip archive for $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcframework")"
 zip -rX "$PROJECT_NAME.xcframework.zip" "$PROJECT_NAME.xcframework" >/dev/null 2>&1
 checkresult $? "'Create Zip' step of 'upload-assets.yml' workflow failed."
 
+echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Creating tar archive for $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcframework")"
 tar -zcvf "$PROJECT_NAME.xcframework.tar.gz" "$PROJECT_NAME.xcframework" >/dev/null 2>&1
 checkresult $? "'Create Tar' step of 'upload-assets.yml' workflow failed."
 

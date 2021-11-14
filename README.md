@@ -7,10 +7,10 @@
 [![Platform](https://img.shields.io/cocoapods/p/KeyValueObservation.svg)](https://cocoapods.org/pods/KeyValueObservation)
 [![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/KeyValueObservation)
 
-![Carthage](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Carthage/badge.svg)
-![Cocoapods](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Cocoapods/badge.svg)
-![XCFramework](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcframework.yml/badge.svg)
-![Xcode Project](https://github.com/SomeRandomiOSDev/KeyValueObservation/workflows/Xcode%20Project/badge.svg)
+[![Carthage](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/carthage.yml/badge.svg)](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/carthage.yml)
+[![Cocoapods](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/cocoapods.yml/badge.svg)](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/cocoapods.yml)
+[![XCFramework](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcframework.yml/badge.svg)](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcframework.yml)
+[![Xcode Project](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcodebuild.yml/badge.svg)](https://github.com/SomeRandomiOSDev/KeyValueObservation/actions/workflows/xcodebuild.yml)
 
 Block based key-value observations in Objective-C
 
@@ -109,11 +109,11 @@ An additional capability of this library is the ability to easily ignore certain
 
 In lieu of having to add flags to your object to determine when or when not to ignore particular Key-Value Observations one can simply do it from the context of a handler block. Any observations that match any of the `SRDKVOInfo` objects passed in to the method will be automatically ignored while executing the block. After the block finishes executing, the observations are once again passed through as normal.
 
-Note that `-[NSObject performWhileIgnoringObservations:handler:]` uses method implementation swizzling to be able to ignore the specified observations, therefore it is important that you do not do any swizzling for the method `-[NSObject observeValueForKeyPath:ofObject:change:context:]` for the receiving class from the context of the handler block. Doing so could lead to unexpected results.  
+Note that `-[NSObject performWhileIgnoringObservations:handler:]` uses method implementation swizzling to be able to ignore the specified observations, therefore it is important that you do not do any swizzling for the method `-[NSObject observeValueForKeyPath:ofObject:change:context:]` for the receiving class from the context of the handler block. Doing so could lead to unexpected results.
 
 ## Contributing
 
-If you have need for a specific feature or you encounter a bug, please open an issue. If you extend the functionality of **KeyValueObservation** yourself or you feel like fixing a bug yourself, please submit a pull request.
+Whether it's submitting a feature request, reporting a bug, or writing code yourself, all contributions to this library are welcome! Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more information on how you can contribute.
 
 ## Author
 

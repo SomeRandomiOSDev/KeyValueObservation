@@ -10,6 +10,9 @@ SCRIPTS_DIR="$(dirname "$SCRIPT")"
 ROOT_DIR="$(dirname "$SCRIPTS_DIR")"
 CURRENT_DIR="$(pwd -P)"
 
+IS_PARSING_BUILD_ARGS=0
+BUILD_ARGS=()
+
 EXIT_CODE=0
 
 # Help
@@ -20,7 +23,9 @@ function printhelp() {
     HELP+="xcframework.sh [--help | -h] [--output (<output_framework> | <output_folder>)]\n"
     HELP+="               [--configuration <configuration>] [--project-name <project_name>]\n"
     HELP+="               [--exclude-dsyms] [--verbose] [--no-clean | --no-clean-on-fail]\n"
-    HELP+="               [--build-dir <build_dir>]\n"
+    HELP+="xcframework.sh [options] -- <build_flags> ...\n"
+    HELP+="\n"
+    HELP+="OPTIONS:\n"
     HELP+="\n"
     HELP+="--help, -h)         Print this help message and exit.\n"
     HELP+="\n"
@@ -54,6 +59,12 @@ function printhelp() {
     HELP+="                    and logs. The directory will be created if needed. If\n"
     HELP+="                    specified this directory will not be deleted when the\n"
     HELP+="                    script finishes running.\n"
+    HELP+="\n"
+    HELP+="ARGUMENTS:\n"
+    HELP+="\n"
+    HELP+="<build_flags>       Any arguments that appear after a '--' argument are treated\n"
+    HELP+="                    as Xcode build arguments and are passed as is to `xcodebuild`\n"
+    HELP+="                    when building the architectures for the XCFramework.\n"
 
     IFS='%'
     echo -e $HELP 1>&2
@@ -65,60 +76,71 @@ function printhelp() {
 # Parse Arguments
 
 while [[ $# -gt 0 ]]; do
-    case "$1" in
-        --output)
-        OUTPUT="$2"
-        shift # --output
-        shift # <project_name>
-        ;;
+    if [ "$IS_PARSING_BUILD_ARGS" == "1" ]; then
+        BUILD_ARGS=("${BUILD_ARGS[@]}" "$1")
+        shift
+    else
+        case "$1" in
+            --output)
+            OUTPUT="$2"
+            shift # --output
+            shift # <project_name>
+            ;;
 
-        --configuration)
-        CONFIGURATION="$2"
-        shift # --configuration
-        shift # <configuration>
-        ;;
+            --configuration)
+            CONFIGURATION="$2"
+            shift # --configuration
+            shift # <configuration>
+            ;;
 
-        --project-name)
-        PROJECT_NAME="$2"
-        shift # --project-name
-        shift # <project_name>
-        ;;
+            --project-name)
+            PROJECT_NAME="$2"
+            shift # --project-name
+            shift # <project_name>
+            ;;
 
-        --exclude-dsyms)
-        EXCLUDE_DSYMS=1
-        shift # --exclude-dsyms
-        ;;
+            --exclude-dsyms)
+            EXCLUDE_DSYMS=1
+            shift # --exclude-dsyms
+            ;;
 
-        --no-clean)
-        NO_CLEAN=1
-        shift # --no-clean
-        ;;
+            --no-clean)
+            NO_CLEAN=1
+            shift # --no-clean
+            ;;
 
-        --no-clean-on-fail)
-        NO_CLEAN_ON_FAIL=1
-        shift # --no-clean-on-fail
-        ;;
+            --no-clean-on-fail)
+            NO_CLEAN_ON_FAIL=1
+            shift # --no-clean-on-fail
+            ;;
 
-        --build-dir)
-        BUILD_DIR="$2"
-        shift # --build-dir
-        shift # <build_dir>
-        ;;
+            --build-dir)
+            BUILD_DIR="$2"
+            shift # --build-dir
+            shift # <build_dir>
+            ;;
 
-        --verbose)
-        VERBOSE=1
-        shift # --verbose
-        ;;
+            --verbose)
+            VERBOSE=1
+            shift # --verbose
+            ;;
 
-        --help | -h)
-        printhelp
-        ;;
+            --help | -h)
+            printhelp
+            ;;
 
-        *)
-        "$SCRIPTS_DIR/printformat.sh" "foreground:red" "Unknown argument: $1\n" 1>&2
-        EXIT_CODE=1
-        printhelp
-    esac
+            --)
+            IS_PARSING_BUILD_ARGS=1
+            shift # --
+            ;;
+
+            *)
+            "$SCRIPTS_DIR/printformat.sh" "foreground:red" "Unknown argument: $1\n" 1>&2
+            EXIT_CODE=1
+            printhelp
+            ;;
+        esac
+    fi
 done
 
 #
@@ -163,6 +185,10 @@ else
         exit $EXIT_CODE
     fi
 fi
+
+# Create Temporary Directory
+
+TEMP_DIR="$(mktemp -d -t ".$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]').xcframework.build")"
 
 # Function Declarations
 
@@ -285,14 +311,14 @@ for PLATFORM in "iOS" "iOS Simulator" "Mac Catalyst" "macOS" "tvOS" "tvOS Simula
     #
 
     if [ "$VERBOSE" == "1" ]; then
-        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive
+        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" "${BUILD_ARGS[@]}" archive
     else
         LOG="$(createlogfile "$ARCHIVE-build")"
         ERROR_MESSAGE="$(errormessage "$LOG")"
 
         #
 
-        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" archive > "$LOG" 2>&1
+        xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$PLATFORM" -archivePath "${BUILD_DIR}/$ARCHIVE.xcarchive" -configuration ${CONFIGURATION} SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ONLY_ACTIVE_ARCH=NO ARCHS="$ARCHS" "${BUILD_ARGS[@]}" archive > "$LOG" 2>&1
     fi
 
     checkresult $? "$ERROR_MESSAGE"
