@@ -6,7 +6,7 @@ on:
 jobs:
   xcframework:
     name: Upload XCFramework Assets
-    runs-on: macOS-latest
+    runs-on: macOS-11
     env:
       TMPDIR: /tmp/.keyvalueobservation.assets-xcframework.build
 

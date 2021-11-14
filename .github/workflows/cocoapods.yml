@@ -21,7 +21,7 @@ jobs:
         linttype: [Dynamic, Static]
 
     name: Lint
-    runs-on: macOS-latest
+    runs-on: macOS-11
     env:
       LOGSDIR: /tmp/.keyvalueobservation.cocoapods/Logs/${{ matrix.linttype }}
       LINT_TYPE: ${{ matrix.linttype }}

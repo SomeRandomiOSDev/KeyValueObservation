@@ -19,7 +19,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: macOS-latest
+    runs-on: macOS-11
     env:
       LOGSDIR: /tmp/.keyvalueobservation.carthage/Logs
 

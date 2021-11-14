@@ -6,7 +6,7 @@ on:
 jobs:
   publish:
     name: Publish CocoaPods
-    runs-on: macOS-latest
+    runs-on: macOS-11
     env:
       LOGSDIR: /tmp/.keyvalueobservation.cocoapods/Logs
       COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
