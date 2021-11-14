@@ -7,9 +7,14 @@ on:
     tags-ignore:
       - '**'
     paths-ignore:
-      - .gitignore
-      - LICENSE
-      - README.md
+      - '.github/**' # Ignore all files under '.github'
+      - '!.github/workflows/xcframework.yml' # Except for this workflow
+      - '.gitignore'
+      - 'codecov.yml'
+      - 'KeyValueObservation.podspec'
+      - 'LICENSE'
+      - 'README.md'
+      - 'Tests/**'
 
 jobs:
   build:
@@ -22,9 +27,14 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name: Setup Environment
+      run: |
+        mkdir -p "${TMPDIR}/Output"
+        mkdir -p "${TMPDIR}/Logs"
+
     - name: Build
       run: |
-        ./scripts/xcframework.sh --build-dir "$TMPDIR"
+        ./scripts/xcframework.sh --build-dir "${TMPDIR}"
 
     - name: Upload Logs
       uses: actions/upload-artifact@v2

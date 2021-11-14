@@ -4,24 +4,29 @@ on:
     types: [published]
 
 jobs:
-  build:
-    name: Upload Assets
+  xcframework:
+    name: Upload XCFramework Assets
     runs-on: macOS-latest
     env:
-      TMPDIR: /tmp/.keyvalueobservation.xcframework.build
+      TMPDIR: /tmp/.keyvalueobservation.assets-xcframework.build
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name: Setup Environment
+      run: |
+        mkdir -p "${TMPDIR}/Output"
+        mkdir -p "${TMPDIR}/Logs"
+
     - name: Build
       run: |
-        ./scripts/xcframework.sh --output ${TMPDIR}/KeyValueObservation.xcframework
+        ./scripts/xcframework.sh --build-dir "${TMPDIR}" --output "${TMPDIR}/Output/KeyValueObservation.xcframework"
 
     - name: Create Zip
       run: |
-        cd ${TMPDIR}
-        zip -rX KeyValueObservation.xcframework.zip KeyValueObservation.xcframework
+        cd "${TMPDIR}/Output"
+        zip -rX KeyValueObservation.xcframework.zip KeyValueObservation.xcframework 2>&1 | tee "${TMPDIR}/Logs/Zip.log"
 
     - name: Upload Zip
       uses: actions/upload-release-asset@v1
@@ -29,14 +34,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ${{ env.TMPDIR }}/KeyValueObservation.xcframework.zip
+        asset_path: ${{ env.TMPDIR }}/Output/KeyValueObservation.xcframework.zip
         asset_name: KeyValueObservation.xcframework.zip
         asset_content_type: application/zip
 
     - name: Create Tar
       run: |
-        cd ${TMPDIR}
-        tar -zcvf KeyValueObservation.xcframework.tar.gz KeyValueObservation.xcframework
+        cd "${TMPDIR}/Output"
+        tar -zcvf KeyValueObservation.xcframework.tar.gz KeyValueObservation.xcframework 2>&1 | tee "${TMPDIR}/Logs/Tar.log"
 
     - name: Upload Tar
       uses: actions/upload-release-asset@v1
@@ -44,6 +49,13 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ${{ env.TMPDIR }}/KeyValueObservation.xcframework.tar.gz
+        asset_path: ${{ env.TMPDIR }}/Output/KeyValueObservation.xcframework.tar.gz
         asset_name: KeyValueObservation.xcframework.tar.gz
         asset_content_type: application/gzip
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: XCFrameworkLogs
+        path: ${{ env.TMPDIR }}/Logs/*.log

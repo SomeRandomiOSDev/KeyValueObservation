@@ -7,9 +7,14 @@ on:
     tags-ignore:
       - '**'
     paths-ignore:
-      - .gitignore
-      - LICENSE
-      - README.md
+      - '.github/**' # Ignore all files under '.github'
+      - '!.github/workflows/carthage.yml' # Except for this workflow
+      - '.gitignore'
+      - 'codecov.yml'
+      - 'KeyValueObservation.podspec'
+      - 'LICENSE'
+      - 'README.md'
+      - 'Tests/**'
 
 jobs:
   build:

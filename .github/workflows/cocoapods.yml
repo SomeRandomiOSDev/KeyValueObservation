@@ -7,9 +7,12 @@ on:
     tags-ignore:
       - '**'
     paths-ignore:
-      - .gitignore
-      - LICENSE
-      - README.md
+      - '.github/**' # Ignore all files under '.github'
+      - '!.github/workflows/cocoapods.yml' # Except for this workflow
+      - '.gitignore'
+      - 'codecov.yml'
+      - 'LICENSE'
+      - 'README.md'
 
 jobs:
   lint:
@@ -20,33 +23,33 @@ jobs:
     name: Lint
     runs-on: macOS-latest
     env:
-      LOGSDIR: /tmp/.keyvalueobservation.cocoapods/Logs
+      LOGSDIR: /tmp/.keyvalueobservation.cocoapods/Logs/${{ matrix.linttype }}
       LINT_TYPE: ${{ matrix.linttype }}
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Setup Environment
-      run: |
-        mkdir -p "$LOGSDIR"
-
     - name: Setup Cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1
       with:
         version: latest
 
+    - name: Setup Environment
+      run: |
+        mkdir -p "$LOGSDIR"
+
     - name: Lint
       run: |
         if [ "$LINT_TYPE" == "Dynamic" ]; then
-            pod lib lint --verbose 2>&1 | tee "$LOGSDIR/PodLint-$LINT_TYPE.log"
+            pod lib lint --verbose 2>&1 | tee "$LOGSDIR/PodLint.log"
         else
-            pod lib lint --verbose --use-libraries 2>&1 | tee "$LOGSDIR/PodLint-$LINT_TYPE.log"
+            pod lib lint --verbose --use-libraries 2>&1 | tee "$LOGSDIR/PodLint.log"
         fi
 
     - name: Upload Logs
       uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: Logs
+        name: ${{ matrix.linttype }}Logs
         path: ${{ env.LOGSDIR }}/*.log
