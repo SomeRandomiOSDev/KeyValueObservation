@@ -10,6 +10,7 @@ on:
       - '.github/**' # Ignore all files under '.github'
       - '!.github/workflows/cocoapods.yml' # Except for this workflow
       - '.gitignore'
+      - '.remarkrc'
       - 'codecov.yml'
       - 'LICENSE'
       - 'README.md'

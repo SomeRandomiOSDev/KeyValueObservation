@@ -38,7 +38,7 @@ function printhelp() {
     HELP+="                    \"<scripts_dir>/build/<project_name>.xcframework\"\n"
     HELP+="\n"
     HELP+="--configuration)    The configuration to use when building each scheme. This is\n"
-    HELP+="                    passed directly to `xcodebuild` without modification. If not\n"
+    HELP+="                    passed directly to 'xcodebuild' without modification. If not\n"
     HELP+="                    specified, this defaults to \"Release\".\n"
     HELP+="\n"
     HELP+="--project-name)     The name of the project to run tests against. If not\n"
@@ -63,11 +63,11 @@ function printhelp() {
     HELP+="ARGUMENTS:\n"
     HELP+="\n"
     HELP+="<build_flags>       Any arguments that appear after a '--' argument are treated\n"
-    HELP+="                    as Xcode build arguments and are passed as is to `xcodebuild`\n"
+    HELP+="                    as Xcode build arguments and are passed as is to 'xcodebuild'\n"
     HELP+="                    when building the architectures for the XCFramework.\n"
 
     IFS='%'
-    echo -e $HELP 1>&2
+    echo -e "$HELP" 1>&2
     unset IFS
 
     exit $EXIT_CODE
@@ -185,10 +185,6 @@ else
         exit $EXIT_CODE
     fi
 fi
-
-# Create Temporary Directory
-
-TEMP_DIR="$(mktemp -d -t ".$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]').xcframework.build")"
 
 # Function Declarations
 

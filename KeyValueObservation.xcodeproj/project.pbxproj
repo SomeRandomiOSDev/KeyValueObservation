@@ -21,62 +21,62 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		DD4389FD2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */; };
-		DD4389FE2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */; };
-		DD4389FF2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */; };
-		DD438A002740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */; };
-		DD438A112740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
-		DD438A122740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
-		DD438A132740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
-		DD438A142740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
-		DD438A152740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */; };
-		DD438A162740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */; };
-		DD438A172740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */; };
-		DD438A182740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */; };
-		DD438A192740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */; };
-		DD438A1A2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */; };
-		DD438A1B2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */; };
-		DD438A1C2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */; };
-		DD438A1D2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */; };
-		DD438A1E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */; };
-		DD438A1F2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */; };
-		DD438A202740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */; };
-		DD438A212740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */; };
-		DD438A222740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */; };
-		DD438A232740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */; };
-		DD438A242740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */; };
-		DD438A252740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */; };
-		DD438A262740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */; };
-		DD438A272740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */; };
-		DD438A282740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */; };
-		DD438A292740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
-		DD438A2A2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
-		DD438A2B2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
-		DD438A2C2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
-		DD438A2D2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A2E2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A2F2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A302740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A312740BF9000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A322740BF9000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A332740BF9000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A342740BF9000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A352740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A362740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A372740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A382740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A392740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3A2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3B2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3C2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3D2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A3F2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A402740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A412740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A422740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A432740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD438A442740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A482742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */; };
+		DD438A492742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */; };
+		DD438A4A2742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */; };
+		DD438A4B2742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */; };
+		DD438A5C2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A5D2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A5E2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A5F2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A602742E35000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A612742E35000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A622742E35000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A632742E35000F0A1F6 /* KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A642742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A652742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A662742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A672742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A682742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A692742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6A2742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6B2742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6C2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6D2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6E2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A6F2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A702742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A712742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A722742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A732742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD438A742742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
+		DD438A752742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
+		DD438A762742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
+		DD438A772742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */; };
+		DD438A782742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */; };
+		DD438A792742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */; };
+		DD438A7A2742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */; };
+		DD438A7B2742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */; };
+		DD438A7C2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */; };
+		DD438A7D2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */; };
+		DD438A7E2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */; };
+		DD438A7F2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */; };
+		DD438A802742E35000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */; };
+		DD438A812742E35000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */; };
+		DD438A822742E35100F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */; };
+		DD438A832742E35100F0A1F6 /* NSObject+KeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */; };
+		DD438A842742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */; };
+		DD438A852742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */; };
+		DD438A862742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */; };
+		DD438A872742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */; };
+		DD438A882742E35100F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */; };
+		DD438A892742E35100F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */; };
+		DD438A8A2742E35100F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */; };
+		DD438A8B2742E35100F0A1F6 /* SRDKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */; };
+		DD438A8C2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
+		DD438A8D2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
+		DD438A8E2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
+		DD438A8F2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */; };
 		DD48BC98270E0DE800D842BC /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D5C423D11D140046E63E /* KeyValueObservation.framework */; };
 		DD86D54723D11B3E0046E63E /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */; };
 		DD86D57923D11C860046E63E /* KeyValueObservation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* KeyValueObservation.framework */; };
@@ -116,38 +116,38 @@
 
 /* Begin PBXFileReference section */
 		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
-		DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservationTests.m; sourceTree = "<group>"; };
-		DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservation+Internal.h"; sourceTree = "<group>"; };
-		DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KeyValueObservation.m"; sourceTree = "<group>"; };
-		DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservation.m; sourceTree = "<group>"; };
-		DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KeyValueObservation.m"; sourceTree = "<group>"; };
-		DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservedChange.m; sourceTree = "<group>"; };
-		DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKVOInfo.m; sourceTree = "<group>"; };
-		DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservedChange+Internal.h"; sourceTree = "<group>"; };
-		DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKVOInfo.h; sourceTree = "<group>"; };
-		DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObservation.h; sourceTree = "<group>"; };
-		DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KeyValueObservation.h"; sourceTree = "<group>"; };
-		DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservedChange.h; sourceTree = "<group>"; };
-		DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KeyValueObservation.h"; sourceTree = "<group>"; };
-		DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservation.h; sourceTree = "<group>"; };
-		DD438A102740BF9000F0A1F6 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD438A452742CFD900F0A1F6 /* .remarkrc */ = {isa = PBXFileReference; explicitFileType = text.json; path = .remarkrc; sourceTree = "<group>"; };
+		DD438A462742D18A00F0A1F6 /* Plists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plists; sourceTree = "<group>"; };
+		DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservationTests.m; sourceTree = "<group>"; };
+		DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKVOInfo.h; sourceTree = "<group>"; };
+		DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObservation.h; sourceTree = "<group>"; };
+		DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KeyValueObservation.h"; sourceTree = "<group>"; };
+		DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservedChange.h; sourceTree = "<group>"; };
+		DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KeyValueObservation.h"; sourceTree = "<group>"; };
+		DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDKeyValueObservation.h; sourceTree = "<group>"; };
+		DD438A532742E35000F0A1F6 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservation+Internal.h"; sourceTree = "<group>"; };
+		DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KeyValueObservation.m"; sourceTree = "<group>"; };
+		DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservation.m; sourceTree = "<group>"; };
+		DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KeyValueObservation.m"; sourceTree = "<group>"; };
+		DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKeyValueObservedChange.m; sourceTree = "<group>"; };
+		DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDKVOInfo.m; sourceTree = "<group>"; };
+		DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRDKeyValueObservedChange+Internal.h"; sourceTree = "<group>"; };
 		DD48BC94270E0DE800D842BC /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD48BC9F270E0F4500D842BC /* KeyValueObservationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyValueObservationTests.xctestplan; sourceTree = "<group>"; };
 		DD48BCA0270E0F9A00D842BC /* KeyValueObservation macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation macOS Tests.xctestplan"; sourceTree = "<group>"; };
 		DD48BCA1270E0FE200D842BC /* KeyValueObservation tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation tvOS Tests.xctestplan"; sourceTree = "<group>"; };
 		DD48BCA2270E101D00D842BC /* KeyValueObservation watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyValueObservation watchOS Tests.xctestplan"; sourceTree = "<group>"; };
-		DD5D044A261FA56400BA0FC2 /* KeyValueObservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyValueObservationTests-Info.plist"; path = "Plists/KeyValueObservationTests-Info.plist"; sourceTree = "<group>"; };
 		DD86D53D23D11B3E0046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD86D54123D11B3E0046E63E /* KeyValueObservation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyValueObservation-Info.plist"; path = "Plists/KeyValueObservation-Info.plist"; sourceTree = "<group>"; };
 		DD86D54623D11B3E0046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D57023D11C860046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D57823D11C860046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D58C23D11CA00046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D59423D11CA00046E63E /* KeyValueObservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyValueObservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D5C423D11D140046E63E /* KeyValueObservation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyValueObservation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		DD86D5E023D22DB90046E63E /* KeyValueObservation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = KeyValueObservation.podspec; sourceTree = SOURCE_ROOT; };
-		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DD86D5E023D22DB90046E63E /* KeyValueObservation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = KeyValueObservation.podspec; sourceTree = "<group>"; };
+		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDA42148273E153D00F2B0BC /* github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = github; path = .github; sourceTree = "<group>"; };
 		DDB1DE5C2405EEE300C20FED /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,32 +216,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD438A012740BF9000F0A1F6 /* src */ = {
+		DD438A4C2742E35000F0A1F6 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				DD438A032740BF9000F0A1F6 /* NSArray+KeyValueObservation.m */,
-				DD438A052740BF9000F0A1F6 /* NSObject+KeyValueObservation.m */,
-				DD438A022740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h */,
-				DD438A042740BF9000F0A1F6 /* SRDKeyValueObservation.m */,
-				DD438A082740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */,
-				DD438A062740BF9000F0A1F6 /* SRDKeyValueObservedChange.m */,
-				DD438A072740BF9000F0A1F6 /* SRDKVOInfo.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		DD438A092740BF9000F0A1F6 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				DD438A102740BF9000F0A1F6 /* module.modulemap */,
-				DD438A0B2740BF9000F0A1F6 /* KeyValueObservation.h */,
-				DD438A0C2740BF9000F0A1F6 /* NSArray+KeyValueObservation.h */,
-				DD438A0E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h */,
-				DD438A0F2740BF9000F0A1F6 /* SRDKeyValueObservation.h */,
-				DD438A0D2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h */,
-				DD438A0A2740BF9000F0A1F6 /* SRDKVOInfo.h */,
+				DD438A532742E35000F0A1F6 /* module.modulemap */,
+				DD438A4E2742E35000F0A1F6 /* KeyValueObservation.h */,
+				DD438A4F2742E35000F0A1F6 /* NSArray+KeyValueObservation.h */,
+				DD438A512742E35000F0A1F6 /* NSObject+KeyValueObservation.h */,
+				DD438A522742E35000F0A1F6 /* SRDKeyValueObservation.h */,
+				DD438A502742E35000F0A1F6 /* SRDKeyValueObservedChange.h */,
+				DD438A4D2742E35000F0A1F6 /* SRDKVOInfo.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		DD438A542742E35000F0A1F6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD438A562742E35000F0A1F6 /* NSArray+KeyValueObservation.m */,
+				DD438A582742E35000F0A1F6 /* NSObject+KeyValueObservation.m */,
+				DD438A552742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h */,
+				DD438A572742E35000F0A1F6 /* SRDKeyValueObservation.m */,
+				DD438A5B2742E35000F0A1F6 /* SRDKeyValueObservedChange+Internal.h */,
+				DD438A592742E35000F0A1F6 /* SRDKeyValueObservedChange.m */,
+				DD438A5A2742E35000F0A1F6 /* SRDKVOInfo.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		DD48BC9E270E0F1300D842BC /* Test Plans */ = {
@@ -258,8 +258,8 @@
 		DD5D04E52621361600BA0FC2 /* KeyValueObservation */ = {
 			isa = PBXGroup;
 			children = (
-				DD438A092740BF9000F0A1F6 /* include */,
-				DD438A012740BF9000F0A1F6 /* src */,
+				DD438A4C2742E35000F0A1F6 /* include */,
+				DD438A542742E35000F0A1F6 /* src */,
 			);
 			path = KeyValueObservation;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 		DD5D04F22621362400BA0FC2 /* KeyValueObservationTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD4389FC2740BF8300F0A1F6 /* KeyValueObservationTests.m */,
+				DD438A472742E34300F0A1F6 /* KeyValueObservationTests.m */,
 			);
 			path = KeyValueObservationTests;
 			sourceTree = "<group>";
@@ -308,14 +308,14 @@
 		DD86D55B23D11BA80046E63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD438A462742D18A00F0A1F6 /* Plists */,
 				DDA42148273E153D00F2B0BC /* github */,
 				DD17A9F9257744BC00D30599 /* scripts */,
 				DD86D5E023D22DB90046E63E /* KeyValueObservation.podspec */,
 				DDB1DE5C2405EEE300C20FED /* codecov.yml */,
+				DD438A452742CFD900F0A1F6 /* .remarkrc */,
 				DD86D5E123D22DB90046E63E /* README.md */,
 				DD86D5DE23D22DB90046E63E /* LICENSE */,
-				DD86D54123D11B3E0046E63E /* KeyValueObservation-Info.plist */,
-				DD5D044A261FA56400BA0FC2 /* KeyValueObservationTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -344,14 +344,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A2D2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */,
-				DD438A412740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
-				DD438A312740BF9000F0A1F6 /* KeyValueObservation.h in Headers */,
-				DD438A392740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
-				DD438A352740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
-				DD438A3D2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
-				DD438A112740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
-				DD438A292740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6C2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
+				DD438A8C2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A682742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
+				DD438A5C2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */,
+				DD438A742742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD438A642742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
+				DD438A602742E35000F0A1F6 /* KeyValueObservation.h in Headers */,
+				DD438A702742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +359,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A2E2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */,
-				DD438A422740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
-				DD438A322740BF9000F0A1F6 /* KeyValueObservation.h in Headers */,
-				DD438A3A2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
-				DD438A362740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
-				DD438A3E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
-				DD438A122740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
-				DD438A2A2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6D2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
+				DD438A8D2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A692742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
+				DD438A5D2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */,
+				DD438A752742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD438A652742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
+				DD438A612742E35000F0A1F6 /* KeyValueObservation.h in Headers */,
+				DD438A712742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +374,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A2F2740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */,
-				DD438A432740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
-				DD438A332740BF9000F0A1F6 /* KeyValueObservation.h in Headers */,
-				DD438A3B2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
-				DD438A372740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
-				DD438A3F2740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
-				DD438A132740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
-				DD438A2B2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6E2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
+				DD438A8E2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6A2742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
+				DD438A5E2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */,
+				DD438A762742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD438A662742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
+				DD438A622742E35000F0A1F6 /* KeyValueObservation.h in Headers */,
+				DD438A722742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,14 +389,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A302740BF9000F0A1F6 /* SRDKVOInfo.h in Headers */,
-				DD438A442740BF9000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
-				DD438A342740BF9000F0A1F6 /* KeyValueObservation.h in Headers */,
-				DD438A3C2740BF9000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
-				DD438A382740BF9000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
-				DD438A402740BF9000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
-				DD438A142740BF9000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
-				DD438A2C2740BF9000F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6F2742E35000F0A1F6 /* NSObject+KeyValueObservation.h in Headers */,
+				DD438A8F2742E35100F0A1F6 /* SRDKeyValueObservedChange+Internal.h in Headers */,
+				DD438A6B2742E35000F0A1F6 /* SRDKeyValueObservedChange.h in Headers */,
+				DD438A5F2742E35000F0A1F6 /* SRDKVOInfo.h in Headers */,
+				DD438A772742E35000F0A1F6 /* SRDKeyValueObservation+Internal.h in Headers */,
+				DD438A672742E35000F0A1F6 /* NSArray+KeyValueObservation.h in Headers */,
+				DD438A632742E35000F0A1F6 /* KeyValueObservation.h in Headers */,
+				DD438A732742E35000F0A1F6 /* SRDKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A002740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */,
+				DD438A4B2742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,11 +714,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A192740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
-				DD438A212740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
-				DD438A1D2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
-				DD438A252740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */,
-				DD438A152740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A7C2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
+				DD438A842742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
+				DD438A782742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A802742E35000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
+				DD438A882742E35100F0A1F6 /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,7 +726,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4389FD2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */,
+				DD438A482742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,11 +734,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A1A2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
-				DD438A222740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
-				DD438A1E2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
-				DD438A262740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */,
-				DD438A162740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A7D2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
+				DD438A852742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
+				DD438A792742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A812742E35000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
+				DD438A892742E35100F0A1F6 /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4389FE2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */,
+				DD438A492742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,11 +754,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A1B2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
-				DD438A232740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
-				DD438A1F2740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
-				DD438A272740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */,
-				DD438A172740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A7E2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
+				DD438A862742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
+				DD438A7A2742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A822742E35100F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
+				DD438A8A2742E35100F0A1F6 /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +766,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4389FF2740BF8300F0A1F6 /* KeyValueObservationTests.m in Sources */,
+				DD438A4A2742E34300F0A1F6 /* KeyValueObservationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,11 +774,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD438A1C2740BF9000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
-				DD438A242740BF9000F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
-				DD438A202740BF9000F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
-				DD438A282740BF9000F0A1F6 /* SRDKVOInfo.m in Sources */,
-				DD438A182740BF9000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A7F2742E35000F0A1F6 /* SRDKeyValueObservation.m in Sources */,
+				DD438A872742E35100F0A1F6 /* SRDKeyValueObservedChange.m in Sources */,
+				DD438A7B2742E35000F0A1F6 /* NSArray+KeyValueObservation.m in Sources */,
+				DD438A832742E35100F0A1F6 /* NSObject+KeyValueObservation.m in Sources */,
+				DD438A8B2742E35100F0A1F6 /* SRDKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,7 +51,7 @@ function printhelp() {
     HELP+="                          have finished running."
 
     IFS='%'
-    echo -e $HELP 1>&2
+    echo -e "$HELP" 1>&2
     unset IFS
 
     exit $EXIT_CODE
