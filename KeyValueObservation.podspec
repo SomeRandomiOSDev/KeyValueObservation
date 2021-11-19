@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KeyValueObservation"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "A small KVO helper library"
   s.description  = <<-DESC
                    A small KVO helper library that provides a NSObject and a NSArray category for observing key value changes using blocks
