@@ -12,13 +12,14 @@ A brief description of your `pull request`.
 
 Ensure that your `pull request` has followed all the steps below:
 
-- [ ] Code compilation.
-- [ ] All tests passing.
-- [ ] Added new unit tests, if applicable.
-- [ ] Extended the documentation (including README), if applicable.
-- [ ] Updated version in KeyValueObservation.podspec following [semver](https://semver.org) guidelines.
-- [ ] Ran [workflowtests.sh](../../scripts/workflowtests.sh) and passed.
-- [ ] Added myself to the [CONTRIBUTORS](../CONTRIBUTORS.md) file.
+* [ ] Code compilation.
+* [ ] All tests passing.
+* [ ] No new SwiftLint issues.
+* [ ] Added new unit tests, if applicable.
+* [ ] Extended the documentation (including README), if applicable.
+* [ ] Updated version in KeyValueObservation.podspec following [semver](https://semver.org) guidelines.
+* [ ] Ran [workflowtests.sh](../../scripts/workflowtests.sh) and passed.
+* [ ] Added myself to the [CONTRIBUTORS](../CONTRIBUTORS.md) file.
 
 ## Proposed changes
 

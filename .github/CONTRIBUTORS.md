@@ -1,6 +1,6 @@
 # Contributors
 
-## Special thanks for all the people who have contributed this project so far:
+## Special thanks for all the people who have contributed this project so far
 
 I would like to give a special thanks to all of the people below who have contributed to this project and to all of those who will contribute to it moving forward.
 

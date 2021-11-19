@@ -23,7 +23,7 @@ function printhelp() {
     HELP+="                the working directory is searched for a Xcode project.\n"
 
     IFS='%'
-    echo -e $HELP 1>&2
+    echo -e "$HELP" 1>&2
     unset IFS
 
     exit $EXIT_CODE

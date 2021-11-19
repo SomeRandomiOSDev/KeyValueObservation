@@ -75,7 +75,7 @@ function printadvancedhelp() {
     HELP+="any number between 0 and 256 can be used (e.g. \"foreground:98\").\n"
 
     IFS='%'
-    echo -e $HELP 1>&2
+    echo -e "$HELP" 1>&2
     unset IFS
 
     exit 0
